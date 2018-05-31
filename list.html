@@ -4,12 +4,211 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-   <title>recommend</title>
+   <title>list</title>
    <link rel="stylesheet" href="css/bootstrap.css"/>
+   <style>
+   		body{
+   			background-color: black;
+   		}
+
+
+/*		.movie_img:hover{
+   			filter:brightness(0.3);
+		}*/
+
+		.movie_img{
+			width: 330px;
+			height:400px;
+		}
+		
+		.movie:hover{
+			cursor: pointer;
+		}
+
+
+
+		
+		.movie {
+		  font-family: 'Raleway', Arial, sans-serif;
+		  position: relative;
+		  float: left;
+		  margin: 10px 1%;
+		  min-width: 310px -60px;
+		  max-width: 310px;
+		  /*width: 100%;*/
+		  color: #ffffff;
+		  text-align: left;
+		  background-color: #000000;
+		  font-size: 16px;
+		  width: 310px;
+		  height:400px;
+		}
+		.movie * {
+		  -webkit-box-sizing: border-box;
+		  box-sizing: border-box;
+		  -webkit-transition: all 0.4s ease-in;
+		  transition: all 0.4s ease-in;
+		}
+		.movie img {
+		  position: relative;
+		  max-width: 100%;
+		  vertical-align: top;
+		}
+		.movie figcaption {
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  width: 100%;
+		  height: 100%;
+		  z-index: 1;
+		  opacity: 0;
+		  padding: 20px 30px;
+		  padding-top: 70px;
+		}
+		.movie figcaption:before,
+		.movie figcaption:after {
+		  width: 1px;
+		  height: 0;
+		}
+		.movie figcaption:before {
+		  right: 0;
+		  top: 0;
+		}
+		.movie figcaption:after {
+		  left: 0;
+		  bottom: 0;
+		}
+		.movie h3,
+		.movie p {
+		  line-height: 1.5em;
+		}
+		.movie h3 {
+		  margin: 0 0 5px;
+		  font-weight: 700;
+		  text-transform: uppercase;
+		}
+		.movie p {
+		  font-size: 0.8em;
+		  font-weight: 500;
+		  margin: 0 0 15px;
+		}
+		.movie a {
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  right: 0;
+		  left: 0;
+		  z-index: 1;
+		}
+		.movie:before,
+		.movie:after,
+		.movie figcaption:before,
+		.movie figcaption:after {
+		  position: absolute;
+		  content: '';
+		  background-color: #ffffff;
+		  z-index: 1;
+		  -webkit-transition: all 0.4s ease-in;
+		  transition: all 0.4s ease-in;
+		  opacity: 0.8;
+		}
+		.movie:before,
+		.movie:after {
+		  height: 1px;
+		  width: 0%;
+		}
+		.movie:before {
+		  top: 0;
+		  left: 0;
+		}
+		.movie:after {
+		  bottom: 0;
+		  right: 0;
+		}
+		.movie:hover img,
+		.movie.hover img {
+		  opacity: 0.4;
+		}
+		.movie:hover figcaption,
+		.movie.hover figcaption {
+		  opacity: 1;
+		}
+		.movie:hover figcaption:before,
+		.movie.hover figcaption:before,
+		.movie:hover figcaption:after,
+		.movie.hover figcaption:after {
+		  height: 100%;
+		}
+		.movie:hover:before,
+		.movie.hover:before,
+		.movie:hover:after,
+		.movie.hover:after {
+		  width: 100%;
+		}
+		.movie:hover:before,
+		.movie.hover:before,
+		.movie:hover:after,
+		.movie.hover:after,
+		.movie:hover figcaption:before,
+		.movie.hover figcaption:before,
+		.movie:hover figcaption:after,
+		.movie.hover figcaption:after {
+		  opacity: 0.1;
+		}
+		/* Demo purposes only */
+		body {
+		  background-color: #212121;
+		}
+
+
+
+
+   </style>
 </head>
 <body>
-
+ <div class="container">
+ 	<div class="row">
+ 		<h3>액션 영화</h3>
+ 		<div class="col-sm-3 col-xs-6 movie">
+ 			<img src="movie_img/act_man.jpg" class="img-responsive movie_img"/>
+ 			<figcaption>
+ 				<h3>아저씨</h3>
+ 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate dicta, impedit sunt, assumenda corrupti inventore autem consequuntur numquam praesentium quas illum architecto, adipisci laudantium unde. Aut officiis porro animi impedit?</p>
+ 			</figcaption>
+ 			<p>아저씨</p>							
+ 		</div>
+ 		<div class="col-sm-3 col-xs-6 movie">
+ 			<img src="movie_img/act_am.jpg" class="img-responsive movie_img"/>
+ 			<figcaption>
+ 				
+ 			</figcaption>
+			<p>암살</p>			
+ 		</div>
+ 		<div class="col-sm-3 col-xs-6 movie">
+ 			<img src="movie_img/act_ninja.png" class="img-responsive movie_img"/>
+ 			<figcaption>
+ 				
+ 			</figcaption>
+			<p>닌자어쌔신</p>			
+ 		</div>
+ 		<div class="col-sm-3 col-xs-6 movie">
+ 			<img src="movie_img/act_taken.png" class="img-responsive movie_img"/>
+ 			<figcaption>
+ 				
+ 			</figcaption>
+			<p>테이큰</p>			
+ 		</div>
+ 	</div>
+ </div>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>   
+<script>
+  /* Demo purposes only */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+</script>
 </body>
 </html>
