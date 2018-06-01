@@ -160,13 +160,13 @@
 			font-weight: bold;
 			margin-bottom: 0;			
 		}
-
+/*
 		.box{
 			width:100%;
 			height:150px;
-		}
+		}*/
 
-		.fadeInUp{
+/*		.fadeInUp{
 			animation-duration: 1.8s; 
 		}
 
@@ -180,7 +180,7 @@
 
 		.c4 .fadeInUp{
 			animation-delay:0.9s;
-		}
+		}*/
 
 		body{
 			font-family: "Nanum Barun Gothic",sans-serif;
@@ -276,15 +276,15 @@
 
 		.container{
 			/*border:1px solid black;*/
-			margin-top: 150px;
+			margin-top: 180px;
 		}
 
 
 		.mbox{
 			
 			position:fixed;
-			top: 280px;
-			left:30px;
+			top: 300px;
+			left:65px;
 			/*background-color: gray;*/
 			/*opacity: 0.4;*/
 			z-index: 5;
@@ -293,12 +293,17 @@
 
 		.mbox a{
 			text-decoration: none;
-			color: white;
+			color:white;
+			/*font-weight: bold;*/
 		}
 
-		.mbox a:hover{
-			color:#E74C3C;
+		.active{
+			background-color:#E74C3C;
 		}
+
+	/*	.mbox a:hover{
+			color:#E74C3C;
+		}*/
 
 		.mbox ul{
 			list-style:none;
@@ -312,19 +317,21 @@
 		}
 
 		.mbox{
-			border:1px solid white;
+			border:1px solid gray;
 		}
 
 		.mbox li{
-			padding:8px;
+			padding:10px;
 			font-size: 16px;
+			text-align: center;
 
 		}
 
-		.line{
+		.mbox .line{
 			border:1px solid gray;
 			opacity: 0.7;
 		}
+
 
 
 
@@ -343,19 +350,20 @@
 			</ul>
 		</div>
 	</header>
+	<!-- nav nav-pills nav-stacked -->
 	<div class="mbox" style="z-index: 9">
-		<ul>
-			<li><a href="#section1">액션</a></li>
+		<ul class="">
+			<li class="active"><a href="#section1" data-toggle="tab">액션</a></li>
 			<div class="line"></div>
-			<li><a href="#section2">로맨스</a></li>
+			<li><a href="#section2" data-toggle="tab">로맨스</a></li>
 			<div class="line"></div>
-			<li><a href="#section3">SF/판타지</a></li>
+			<li><a href="#section3" data-toggle="tab">SF/판타지</a></li>
 			<div class="line"></div>
-			<li><a href="#section4">가족/코미디</a></li>
+			<li><a href="#section4" data-toggle="tab">가족/코미디</a></li>
 			<div class="line"></div>
-			<li><a href="#section5">독립</a></li>
+			<li><a href="#section5" data-toggle="tab">독립</a></li>
 			<div class="line"></div>
-			<li><a href="#section6">애니메이션</a></li>
+			<li><a href="#section6" data-toggle="tab">애니메이션</a></li>
 		</ul>
 	</div>
 	<div id="fullpage" class="wrapper" style="z-index: 1;">
@@ -883,10 +891,16 @@
 
 
 	$(".mbox a").smoothScroll({
-	
+
 	});
 
-	$("")
+	// $(".mbox li").click(function(){
+	// 	$(this).css("background-color","red");
+	// });
+
+
+
+
 
 
  
