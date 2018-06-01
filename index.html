@@ -6,10 +6,134 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>MoviePicker</title>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+		body{
+			font-family: "Nanum Barun Gothic",sans-serif;
+		}
+		header{
+			width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding:30px 40px;
+            background-color: black;
+        	position: fixed;
+        	z-index: 100;
+        }
+        .glyphicon-eye-open{
+         	color: white;
+         	margin: 6px 6px 0px 0px;
+         	font-size: 30px;
+        }
+        .logo img{
+			width: 200px;
+			position: absolute;
+        }
+        .menu{
+            background-color: transparent;
+            bottom:auto;
+            left:auto;
+            opacity:1;
+            pointer-events: all;
+            right:auto;
+        }
+
+        .menu ul{
+            list-style-type:none;
+            left:auto;
+            max-width: none;
+            display: flex;
+            top:auto;
+            transform: none;
+            width:auto;
+            margin: 10px 35px 0px 0px;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left:30px;
+            font-size: 18px;
+            font-weight:bold;
+        }
+	    .menu a{
+            text-decoration:none;
+            color:white;
+        }
+        .menu a:hover{
+            text-decoration:none;
+            color:#d9534f;
+        }
+        .wrapper{
+        	width:100%;
+         	height: 100%;
+         	position: absolute;
+         	touch-action: none;
+         	transform: translate3d(0px, 0px, 0px);
+         	transition: all 700ms ease;
+        }
+        .section{
+			overflow: hidden;
+			position: relative;
+			background-size: cover;
+			width:100%;
+			height: 100%;
+        }
+        #section1{
+			background-color: blue;
+        }
+        #section2{
+			background-color: red;
+        }
+        #section3{
+			background-color: green;
+        }
+        #section4{
+			background-color: black;
+        }
+	</style>
 </head>
 <body>
-
+<div>
+	<header>
+		<a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+		<div class="menu">
+			<ul>
+				<li><a href="">홈</a></li>
+				<li><a href="">테스트</a></li>
+				<li><a href="">장르</a></li>
+			</ul>
+		</div>
+	</header>
+	<div id="fullpage" class="wrapper">
+		<div id="section1" class="section">
+			<div class="video_area">
+				<video src=""></video>
+			</div>
+		</div>
+		<div id="section2" class="section">
+			
+		</div>
+		<div id="section3" class="section">
+			
+		</div>
+		<div id="section4" class="section">
+			
+		</div>
+	</div>
+</div>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
+<script>
+	$(window).on("scroll", function(){
+		var scrollTop=$(window).scrollTop();
+		if(scrollTop>150){
+			$('header').css("background-color","transparent");
+		}
+		if(scrollTop<=150){
+			$('header').css("background-color","black");
+		}
+
+	 });
+
+</script>
 </body>
 </html>
