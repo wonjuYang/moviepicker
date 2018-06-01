@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1"/>
    <title>list</title>
    <link rel="stylesheet" href="css/bootstrap.css"/>
+   <link rel="stylesheet" href="css/animate.css"/>
    <style>
    		body{
    			background-color: black;
@@ -19,9 +20,6 @@
 		.movie:hover{
 			cursor: pointer;
 		}
-
-
-
 		
 		.movie{
 		  font-family: 'Raleway', Arial, sans-serif;
@@ -151,21 +149,16 @@
 		}
 		/* Demo purposes only */
 		body {
-		  background-color: #212121;
+		  background-color: #000000;
 		}
 
-		figcaption{
-			width
-		}
 
 		p.title{
 			font-size: 18px;
 			color:white;
 			width:260px;
 			font-weight: bold;
-			margin-bottom: 0;
-			
-
+			margin-bottom: 0;			
 		}
 
 		.box{
@@ -173,15 +166,48 @@
 			height:100px;
 		}
 
+		.fadeInUp{
+			animation-duration: 1.8s; 
+		}
+
+		.c2 .fadeInUp{
+			animation-delay:0.3s;
+		}
+
+		.c3 .fadeInUp{
+			animation-delay:0.6s;
+		}
+
+		.c4 .fadeInUp{
+			animation-delay:0.9s;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
 
    </style>
 </head>
 <body> 
 <div class="container">
+
+	<div class="box2">
  	<div class="row">
  		<h3 style="color:white">&nbsp;&nbsp;액션 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/act_man.jpg" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -197,8 +223,8 @@
 	 			<p style="color:gray;">한국영화:HD <br/> 출연:원빈,김새롬</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c2">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/act_am.jpg" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -218,8 +244,8 @@
 	 			<p style="color:gray;">한국영화:HD <br/> 출연:하정우,이정재,전지현..</p>
  			</figure>								
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c3">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/act_ninja.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -235,8 +261,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:비(정지훈)</p>
  			</figure>								
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c4">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/act_taken.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -251,12 +277,13 @@
 	 			<p style="color:gray;">해외영화:HD <br/>출연:리암니슨,매기 그레이스 </p>
  			</figure>								
  		</div>
+ 		</div>
  	</div>
  	<div class="box"></div>
  	<div class="row">
  		<h3 style="color:white">&nbsp;&nbsp;로맨스 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/rm_about.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -275,8 +302,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:돔널 글리슨,레이첼 맥아담스</p>
  			</figure>						
  		</div>
-  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+  		<div class="col-sm-3 col-xs-6 c2">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/rm_beaty.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -295,8 +322,8 @@
 	 			<p style="color:gray;">한국영화:HD <br/> 출연:한효주,이대명(우진),박서준..</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c3">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/rm_cl.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -311,8 +338,8 @@
 	 			<p style="color:gray;">한국영화:HD <br/> 출연:손예진,조승우,조인성</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c4">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/rm_girl.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -336,7 +363,7 @@
  	<div class="row">
  		<h3 style="color:white">&nbsp;&nbsp;SF/판타지 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/sf_aben.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -354,8 +381,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:로버트 다우니 주니어,조슈 브롤린...</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c2">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/sf_hung.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -371,8 +398,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:제니퍼 로렌스,조쉬 허처슨...</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c3">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/sf_inter.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -391,8 +418,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:매튜 맥커너히,앤 해서웨이...</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c4">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/sf_sin.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -416,7 +443,7 @@
  	<div class="row">
   		<h3 style="color:white">&nbsp;&nbsp;가족/코미디 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/co_bro.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -433,8 +460,8 @@
 	 			<p style="color:gray;">한국영화:HD <br/> 출연:조정석,도경수,박신혜</p>
  			</figure>						
  		</div>
-  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+  		<div class="col-sm-3 col-xs-6 c2">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/co_lucky.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -453,8 +480,8 @@
 	 			<p style="color:gray;">한국영화:HD <br/> 출연:유해진,이준</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c3">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/co_padding.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -474,8 +501,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:벤 위쇼,니콜 키드먼...</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c4">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/co_she.jpg" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -495,7 +522,7 @@
  	<div class="row">
  		<h3 style="color:white">&nbsp;&nbsp;독립 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/dk_gea.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -509,8 +536,8 @@
 	 			<p style="color:gray;">한국영화:HD <br/> 출연:강하나,최리,손숙</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c2">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/dk_fl.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -528,8 +555,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:윌렘 대포,브루클린 프린스...</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c3">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/dk_we.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -547,8 +574,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:아네트 베닝,엘르 패닝,그레타 거윅숙</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c4">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/dk_han.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -570,7 +597,7 @@
  	<div class="row">
  		<h3 style="color:white">&nbsp;&nbsp;애니메이션 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
  		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/ani_voice.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -591,8 +618,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:이리노 미유,하야미 사오리</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c2">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/ani_name.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -615,8 +642,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:카미키 류노스케,카미시라이시 모네</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c3">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/ani_time.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -631,8 +658,8 @@
 	 			<p style="color:gray;">해외영화:HD <br/> 출연:나카 리이사,이시다 타쿠야</p>
  			</figure>						
  		</div>
- 		<div class="col-sm-3 col-xs-6">
- 			<figure class="movie">
+ 		<div class="col-sm-3 col-xs-6 c4">
+ 			<figure class="movie animated fadeInUp">
 	 			<img src="movie_img/ani_wolf.png" class="img-responsive movie_img"/>
 	 			<figcaption>
 	 				<a href="#"></a>
@@ -653,16 +680,13 @@
  			</figure>						
  		</div>	
  	</div>
+ 	<div class="box"></div>
 </div>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>   
 <script>
-  /* Demo purposes only */
-  $(".hover").mouseleave(
-    function () {
-      $(this).removeClass("hover");
-    }
-  );
+
+ 
 </script>
 </body>
 </html>
