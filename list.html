@@ -166,21 +166,28 @@
 			height:150px;
 		}*/
 
-/*		.fadeInUp{
-			animation-duration: 1.8s; 
+		/*.fadeIn{
+			animation-duration: 1s;
 		}
 
-		.c2 .fadeInUp{
+		.fadeIn{
+			animation-duration: 1.8s; 
+		}*/
+		.c1 .fadeIn{
 			animation-delay:0.3s;
 		}
 
-		.c3 .fadeInUp{
+		.c2 .fadeIn{
 			animation-delay:0.6s;
 		}
 
-		.c4 .fadeInUp{
+		.c3 .fadeIn{
 			animation-delay:0.9s;
-		}*/
+		}
+
+		.c4 .fadeIn{
+			animation-delay: 1.2s;
+		}
 
 		body{
 			font-family: "Nanum Barun Gothic",sans-serif;
@@ -353,17 +360,17 @@
 	<!-- nav nav-pills nav-stacked -->
 	<div class="mbox" style="z-index: 9">
 		<ul class="">
-			<li class="active"><a href="#section1" data-toggle="tab">액션</a></li>
+			<li class="active" id="act"><a href="#section1" data-toggle="tab">액션</a></li>
 			<div class="line"></div>
-			<li><a href="#section2" data-toggle="tab">로맨스</a></li>
+			<li id="rm"><a href="#section2" data-toggle="tab">로맨스</a></li>
 			<div class="line"></div>
-			<li><a href="#section3" data-toggle="tab">SF/판타지</a></li>
+			<li id="sf"><a href="#section3" data-toggle="tab">SF/판타지</a></li>
 			<div class="line"></div>
-			<li><a href="#section4" data-toggle="tab">가족/코미디</a></li>
+			<li id="co"><a href="#section4" data-toggle="tab">가족/코미디</a></li>
 			<div class="line"></div>
-			<li><a href="#section5" data-toggle="tab">독립</a></li>
+			<li id="dk"><a href="#section5" data-toggle="tab">독립</a></li>
 			<div class="line"></div>
-			<li><a href="#section6" data-toggle="tab">애니메이션</a></li>
+			<li id="ani"><a href="#section6" data-toggle="tab">애니메이션</a></li>
 		</ul>
 	</div>
 	<div id="fullpage" class="wrapper" style="z-index: 1;">
@@ -379,8 +386,8 @@
 			<div class="container">				
 				<div class="row">
 			 		<h3 style="color:white">&nbsp;&nbsp;액션 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
-			 		<div class="col-sm-3 col-xs-6">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6 c1">
+			 			<figure class="movie animated fadeIn">
 				 			<img src="movie_img/act_man.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -397,7 +404,7 @@
 			 			</figure>						
 			 		</div>
 			 		<div class="col-sm-3 col-xs-6 c2">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie animated fadeIn">
 				 			<img src="movie_img/act_am.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -417,7 +424,7 @@
 			 			</figure>								
 			 		</div>
 			 		<div class="col-sm-3 col-xs-6 c3">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie animated fadeIn">
 				 			<img src="movie_img/act_ninja.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -434,7 +441,7 @@
 			 			</figure>								
 			 		</div>
 			 		<div class="col-sm-3 col-xs-6 c4">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie animated fadeIn">
 				 			<img src="movie_img/act_taken.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -458,7 +465,7 @@
 				<div class="row">
 			 		<h3 style="color:white">&nbsp;&nbsp;로맨스 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie one">
 				 			<img src="movie_img/rm_about.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -477,8 +484,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:돔널 글리슨,레이첼 맥아담스</p>
 			 			</figure>						
 			 		</div>
-			  		<div class="col-sm-3 col-xs-6 c2">
-			 			<figure class="movie animated fadeInUp">
+			  		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie two">
 				 			<img src="movie_img/rm_beaty.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -497,8 +504,8 @@
 				 			<p style="color:gray;">한국영화:HD <br/> 출연:한효주,이대명(우진),박서준..</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c3">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie three">
 				 			<img src="movie_img/rm_cl.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -513,8 +520,8 @@
 				 			<p style="color:gray;">한국영화:HD <br/> 출연:손예진,조승우,조인성</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c4">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie four">
 				 			<img src="movie_img/rm_girl.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -541,7 +548,7 @@
 				<div class="row">
 			 		<h3 style="color:white">&nbsp;&nbsp;SF/판타지 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie one">
 				 			<img src="movie_img/sf_aben.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -559,8 +566,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:로버트 다우니 주니어,조슈 브롤린...</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c2">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie two">
 				 			<img src="movie_img/sf_hung.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -576,8 +583,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:제니퍼 로렌스,조쉬 허처슨...</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c3">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie three">
 				 			<img src="movie_img/sf_inter.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -596,8 +603,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:매튜 맥커너히,앤 해서웨이...</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c4">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie four">
 				 			<img src="movie_img/sf_sin.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -624,7 +631,7 @@
 				<div class="row">
 			  		<h3 style="color:white">&nbsp;&nbsp;가족/코미디 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie one">
 				 			<img src="movie_img/co_bro.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -641,8 +648,8 @@
 				 			<p style="color:gray;">한국영화:HD <br/> 출연:조정석,도경수,박신혜</p>
 			 			</figure>						
 			 		</div>
-			  		<div class="col-sm-3 col-xs-6 c2">
-			 			<figure class="movie animated fadeInUp">
+			  		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie two">
 				 			<img src="movie_img/co_lucky.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -661,8 +668,8 @@
 				 			<p style="color:gray;">한국영화:HD <br/> 출연:유해진,이준</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c3">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie three">
 				 			<img src="movie_img/co_padding.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -682,8 +689,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:벤 위쇼,니콜 키드먼...</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c4">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie four">
 				 			<img src="movie_img/co_she.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -706,7 +713,7 @@
 				<div class="row">
 			 		<h3 style="color:white">&nbsp;&nbsp;독립 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie one">
 				 			<img src="movie_img/dk_gea.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -720,8 +727,8 @@
 				 			<p style="color:gray;">한국영화:HD <br/> 출연:강하나,최리,손숙</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c2">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie two">
 				 			<img src="movie_img/dk_fl.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -739,8 +746,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:윌렘 대포,브루클린 프린스...</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c3">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie three">
 				 			<img src="movie_img/dk_we.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -758,8 +765,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:아네트 베닝,엘르 패닝,그레타 거윅숙</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c4">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie four">
 				 			<img src="movie_img/dk_han.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -784,7 +791,7 @@
 				<div class="row">
 			 		<h3 style="color:white">&nbsp;&nbsp;애니메이션 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
-			 			<figure class="movie animated fadeInUp">
+			 			<figure class="movie one">
 				 			<img src="movie_img/ani_voice.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -805,8 +812,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:이리노 미유,하야미 사오리</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c2">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie two">
 				 			<img src="movie_img/ani_name.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -829,8 +836,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:카미키 류노스케,카미시라이시 모네</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c3">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie three">
 				 			<img src="movie_img/ani_time.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -845,8 +852,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:나카 리이사,이시다 타쿠야</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c4">
-			 			<figure class="movie animated fadeInUp">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie four">
 				 			<img src="movie_img/ani_wolf.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -897,6 +904,172 @@
 	// $(".mbox li").click(function(){
 	// 	$(this).css("background-color","red");
 	// });
+
+	$("#act").click(function(){
+
+
+
+		$("#section1 .one").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c1").one("animationend",function(){
+			$(this).removeClass("c1");
+		});
+
+		$("#section1 .two").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c2").one("animationend",function(){
+			$(this).removeClass("c2");
+		});
+
+		$("#section1 .three").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c3").one("animationend",function(){
+			$(this).removeClass("c3");
+		});
+
+		$("#section1 .four").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c4").one("animationend",function(){
+			$(this).removeClass("c4");
+		});
+
+	});
+
+	$("#rm").click(function(){
+		$("#section2 .one").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c1").one("animationend",function(){
+			$(this).removeClass("c1");
+		});
+
+		$("#section2 .two").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c2").one("animationend",function(){
+			$(this).removeClass("c2");
+		});
+
+		$("#section2 .three").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c3").one("animationend",function(){
+			$(this).removeClass("c3");
+		});
+
+		$("#section2 .four").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c4").one("animationend",function(){
+			$(this).removeClass("c4");
+		});
+
+	});
+
+	$("#sf").click(function(){
+		$("#section3 .one").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c1").one("animationend",function(){
+			$(this).removeClass("c1");
+		});
+
+		$("#section3 .two").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c2").one("animationend",function(){
+			$(this).removeClass("c2");
+		});
+
+		$("#section3 .three").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c3").one("animationend",function(){
+			$(this).removeClass("c3");
+		});
+
+		$("#section3 .four").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c4").one("animationend",function(){
+			$(this).removeClass("c4");
+		});
+
+	});
+
+	$("#co").click(function(){
+		$("#section4 .one").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c1").one("animationend",function(){
+			$(this).removeClass("c1");
+		});
+
+		$("#section4 .two").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c2").one("animationend",function(){
+			$(this).removeClass("c2");
+		});
+
+		$("#section4 .three").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c3").one("animationend",function(){
+			$(this).removeClass("c3");
+		});
+
+		$("#section4 .four").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c4").one("animationend",function(){
+			$(this).removeClass("c4");
+		});
+
+	});
+
+	$("#dk").click(function(){
+		$("#section5 .one").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c1").one("animationend",function(){
+			$(this).removeClass("c1");
+		});
+
+		$("#section5 .two").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c2").one("animationend",function(){
+			$(this).removeClass("c2");
+		});
+
+		$("#section5 .three").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c3").one("animationend",function(){
+			$(this).removeClass("c3");
+		});
+
+		$("#section5 .four").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c4").one("animationend",function(){
+			$(this).removeClass("c4");
+		});
+
+	});
+
+	$("#ani").click(function(){
+		$("#section6 .one").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c1").one("animationend",function(){
+			$(this).removeClass("c1");
+		});
+
+		$("#section6 .two").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c2").one("animationend",function(){
+			$(this).removeClass("c2");
+		});
+
+		$("#section6 .three").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c3").one("animationend",function(){
+			$(this).removeClass("c3");
+		});
+
+		$("#section6 .four").addClass("animated fadeIn").one("animationend",function(){
+			$(this).removeClass("animated fadeIn");
+		}).parent().addClass("c4").one("animationend",function(){
+			$(this).removeClass("c4");
+		});
+
+	});
+
 
 
 
