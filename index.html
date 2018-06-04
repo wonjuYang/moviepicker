@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>MoviePicker</title>
-	<link rel="stylesheet" href="css/bootstrap.css"/>
-	<style>
-		body{
-			font-family: "Nanum Barun Gothic",sans-serif;
-		}
-		header{
-			width: 100%;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>MoviePicker</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <style>
+        body{
+            font-family: "Nanum Barun Gothic",sans-serif;
+        }
+        header{
+            width: 100%;
             display: flex;
             justify-content: space-between;
             padding:30px 40px;
-            background-color: transparent;
-        	position: fixed;
-        	z-index: 100;
+            /*background-color: black;*/
+            position: fixed;
+            z-index: 100;
         }
-        .glyphicon-eye-open{
-         	color: white;
-         	margin: 6px 6px 0px 0px;
-         	font-size: 30px;
+        header .glyphicon-eye-open{
+            color: white;
+            margin: 6px 6px 0px 0px;
+            font-size: 30px;
         }
-        .logo img{
-			width: 200px;
-			position: absolute;
+        header .logo img{
+            width: 200px;
+            position: absolute;
         }
         .menu{
-            background-color: transparent;
             bottom:auto;
             left:auto;
             opacity:1;
             pointer-events: all;
             right:auto;
         }
-
         .menu ul{
             list-style-type:none;
             left:auto;
@@ -47,14 +45,13 @@
             width:auto;
             margin: 10px 35px 0px 0px;
         }
-
         .menu li {
             display: inline-block;
             margin-left:30px;
             font-size: 18px;
             font-weight:bold;
         }
-	    .menu a{
+        .menu a{
             text-decoration:none;
             color:white;
         }
@@ -63,18 +60,18 @@
             color:#d9534f;
         }
         .wrapper{
-        	width:100%;
-         	height: 100%;
-         	position: absolute;
-         	touch-action: none;
-         	transform: translate3d(0px, 0px, 0px);
-         	transition: all 700ms ease;
+            width:100%;
+            height: 100%;
+            position: absolute;
+            touch-action: none;
+            transform: translate3d(0px, 0px, 0px);
+            transition: all 700ms ease;
         }
         .section{
-			overflow: hidden;
-			position: relative;
-			width:100%;
-			height: 100%;
+            overflow: hidden;
+            position: relative;
+            width:100%;
+            height: 100%;
         }
         .section .contents{
             position: absolute;
@@ -105,7 +102,7 @@
             
         }
         #section2{
-			background-color: black;
+            background-color: black;
         }
         #section2 #icons{
             width: 600px;
@@ -116,7 +113,11 @@
         }
         #section2 #icons .icon_box{
             width: 140px;
-            }
+        }
+        #section2 #icons .icon_box .glyphicon{
+            color: #d9534f;
+            font-size:45px;
+        }
         #section2 #icons .icon_box p{
             padding-top: 30px;
             font-size: 16px;
@@ -126,83 +127,149 @@
             margin-top: 40px;
         }
         #section3{
-			background-color: green;
+            /*background-color: green;*/
         }
         #section3 .box_wrapper{
-            display: flex;
-            flex-direction: column;
+            width: 100%;
+            height: 100%;
         }
         #firstrow{
             width: 100%;
             height: 50%;
+            background-color: #d9534f;
+            display: flex;
+            color: white;
         }
         #secondrow{
             width: 100%;
             height: 50%;
+            /*background-color: pink;*/
+            display: flex;
+            color: #d9534f;
         }
-       .box{
+        #section3 .box{
             width: 25%;
-            height: 100%;
-            background-color: pink;
-            border: 1px solid red;
+            text-align: center;
+            overflow: hidden;
+            /*background-color: #d9534f;*/
+        }
+        #section3 .box h2{
+            display: flex;
+            align-content: center;
+        }
+        #section3 .poster{
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #section3 .poster1{
+            background-image: url("movie_img/rm_beaty.PNG");
+        }
+        #section3 .poster2{
+            background-image: url("movie_img/dk_fl.PNG");
+        }
+        #section3 .poster3{
+            background-image: url("img/act_am.jpg");
+        }
+        #section3 .poster4{
+            background-image: url("img/sf_aben.PNG");
         }
         #section4{
-			background-color: black;
+            background-color: black;
+        }
+        #section4 .icons{
+            width: 600px;
+            padding-top: 110px;
+            display: flex;
+            
+            margin:0 auto;
+            
+        }
+        #section4 .icons li{
+            list-style: none;
+            justify-content: space-between;
+        }
+        #section4 footer{
+            position: absolute;
+            width: 100%;
+            height: 160px;
+            background-color: #ffff ;
+            font-size: 14px;
+            bottom: 0%;
+        }
+        #section4 footer .container{
+            position: relative;
+            top: 35%;
+        }
+        #section4 footer .container .logo{
+            display: inline-block;
+        }
+        #section4 address{
+            font-style: normal;
+            list-style: none;
+            display: inline-block;
+            position: relative;
+            float: right;
+        }
+        #section4 address li{
+            padding-bottom: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            color: black;
         }
         /*#right_nav{
-        	position: fixed;
-        	left: 17.5%;
-        	top: 240px;
-        	width: 110px;
-        	margin-left: 20px;
-        	z-index: 30;
+            position: fixed;
+            left: 17.5%;
+            top: 240px;
+            width: 110px;
+            margin-left: 20px;
+            z-index: 30;
         }
         #right_nav li{
-        	position: relative;
-        	margin: 27px 0 0 0;
+            position: relative;
+            margin: 27px 0 0 0;
         }*/
-	</style>
+    </style>
 </head>
 <body>
 <div>
-	<header>
-		<a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
-		<div class="menu">
-			<ul>
-				<li><a href="">홈</a></li>
-				<li><a href="">테스트</a></li>
-				<li><a href="">장르</a></li>
-			</ul>
-		</div>
-	</header>
-	<div id="fullpage" class="wrapper">
-		<div id="section1" class="section">
+    <header>
+        <a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+        <div class="menu">
+            <ul>
+                <li><a href="">홈</a></li>
+                <li><a href="">테스트</a></li>
+                <li><a href="">장르</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="fullpage" class="wrapper">
+        <div id="section1" class="section">
             <!-- <div style="background-color:black; position:absolute; width:100%; height:100%; opacity:0.25; z-index: 500;"></div> -->
-			<video autoplay muted loop>
+            <video autoplay muted loop>
                 <source src="img/TheFloridaProject_mainvideo.mp4"type="video/mp4">
             </video>
             <div class="contents">
-                <img src="img/logo.png" width="300px;" alt="MoviePicker"><span style="font-size: 30px;">는</span>
-                <!-- <p style="font-size: 50px; font-weight: 500; margin-top: 30px;">당신의 영화를 찾아드립니다</p> -->
+                <img src="img/logo.png" width="250px;" alt="MoviePicker">
                 <h1>당신의 영화를 찾아드립니다.</h1>
-                <h3>만족스런 영화 시청을 도와드립니다.</h3>
             </div>
-		</div>
-		<div id="section2" class="section">
+        </div>
+        <div id="section2" class="section">
             <div class="contents" style="top: 15%;">
                 <h1>취향분석테스트</h1>
                 <h4 style="margin-top: 20px;">당신의 영화 취향은 무엇입니까?</h4>
                 <div id="icons">
                     <div class="icon_box">
-                        <span class="glyphicon glyphicon-edit" style="color: #d9534f; font-size:45px;"></span>
+                        <span class="glyphicon glyphicon-edit"></span>
                         <p>취향분석테스트를 통해 취향을 분석해드립니다.</p>
                     </div>
                     <div class="icon_box">
-                        <span class="glyphicon glyphicon-check" style="color: #d9534f; font-size:45px;"></span>
+                        <span class="glyphicon glyphicon-check"></span>
                         <p>당신에게 맞는 영화를 추천해드립니다.</p>
                     </div>
                     <div class="icon_box">
-                        <span class="glyphicon glyphicon-film" style="color: #d9534f; font-size:45px;"></span>
+                        <span class="glyphicon glyphicon-film"></span>
                         <p>만족스런 영화 시청을 즐기세요.</p>
                     </div>
                 </div>
@@ -210,57 +277,70 @@
                     <button class="btn btn-danger btn-lg">테스트하러 가기&nbsp;<span class="glyphicon glyphicon-triangle-right" style="top:3px;"></span></button>
                 </div> 
             </div>
-		</div>
-		<div id="section3" class="section">
-			<div class="box_wrapper">
+        </div>
+        <div id="section3" class="section">
+            <div class="box_wrapper">
                 <div id="firstrow">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+                    <div class="box"><h2>액션</h2></div>
+                    <div class="box poster poster1"><!-- <img src="movie_img/rm_beaty.PNG" alt="로맨스포스터"> --></div>
+                    <div class="box"><h2>SF / 판타지</h2></div>
+                    <div class="box poster poster2"><!-- <img src="movie_img/dk_fl.PNG" alt="독립포스터"> --></div>
                 </div>
                 <div id="secondrow">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+                    <div class="box poster poster3"><!-- <img src="img/act_am.jpg" alt="액션포스터"> --></div>
+                    <div class="box"><h2>로맨스</h2></div>
+                    <div class="box poster poster4"><!-- <img src="img/sf_aben.PNG" alt="SF/판타지포스터"> --></div>
+                    <div class="box"><h2>독립</h2></div>
                 </div>
             </div>
-		</div>
-		<div id="section4" class="section">
-            <div class="contents">
-                
+        </div>
+        <div id="section4" class="section">
+            <div class="contents" style="top:20%;">
+                <h1>Contact us</h1>
+                <div class="icons">
+                    <ul>
+                        <li><span class="glyphicon glyphicon-edit"></span></li>
+                        <li><span class="glyphicon glyphicon-edit"></span></li>
+                        <li><span class="glyphicon glyphicon-edit"></span></li>
+                    </ul>
+                </div>
             </div>
-		</div>
-	</div>
-	<!-- <div id="right_nav">
-		<ul>
-			<li><a href=""></a></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div> -->
-    <footer>
-        
-    </footer>
+            <footer>
+                <div class="container">
+                    <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
+                    <address>
+                    <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 | 대표자: 양원주 | 팀원: 권경아, 손유성, 김미진</li>
+                    <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
+                    </address>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- <div id="right_nav">
+        <ul>
+            <li><a href=""></a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div> -->
+    
 </div>
 <script src="js/jquery-3.3.1.js"></script>
-<script src="js/bootstrap.js"></script>	
+<script src="js/bootstrap.js"></script> 
 <script>
-	// $(window).on("scroll", function(){
-	// 	var scrollTop=$(window).scrollTop();
-	// 	if(scrollTop>150){
-	// 		$('header').css("background-color","transparent");
-	// 	}
-	// 	if(scrollTop<=150){
-	// 		$('header').css("background-color","black");
-	// 	}
-
-	//  });
+    $(window).on("scroll", function(){
+        var scrollTop=$(window).scrollTop();
+        if(scrollTop>100){
+            $('header').css("background-color","transparent");
+        }
+        if(scrollTop<=100){
+            $('header').css("background-color","black");
+        }
+    //  });
     // var ht= $(window).height();
     // $("#section2").height(ht);
-
+    
 </script>
 </body>
 </html>
