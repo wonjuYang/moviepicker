@@ -15,7 +15,7 @@
             display: flex;
             justify-content: space-between;
             padding:30px 40px;
-            background-color: black;
+            background-color: transparent;
         	position: fixed;
         	z-index: 100;
         }
@@ -73,18 +73,78 @@
         .section{
 			overflow: hidden;
 			position: relative;
-			background-size: cover;
 			width:100%;
 			height: 100%;
         }
+        .section .contents{
+            position: absolute;
+            width: 1180px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30%;
+            text-align: center;
+            color: white;
+            z-index: 999;
+        }
+        video{
+            position:fixed;
+            top:50%;left:50%;
+            min-width:100%;
+            min-height:100%;
+            width:auto;
+            height:auto;
+            z-index:200;
+            -webkit-transform:translateX(-50%) translateY(-50%);
+            transform:translateX(-50%) translateY(-50%);     
+            background-size:cover;
+            -webkit-transition:1s opacity;
+            transition:1s opacity;
+        }
         #section1{
-			background-color: blue;
+            
         }
         #section2{
-			background-color: red;
+			background-color: black;
+        }
+        #section2 #icons{
+            width: 600px;
+            padding-top: 110px;
+            display: flex;
+            justify-content: space-between;
+            margin:0 auto;
+        }
+        #section2 #icons .icon_box{
+            width: 140px;
+            }
+        #section2 #icons .icon_box p{
+            padding-top: 30px;
+            font-size: 16px;
+        }
+        #section2 .btn{
+            margin:0 auto;
+            margin-top: 40px;
         }
         #section3{
 			background-color: green;
+        }
+        #section3 .box_wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        #firstrow{
+            width: 100%;
+            height: 50%;
+        }
+        #secondrow{
+            width: 100%;
+            height: 50%;
+        }
+       .box{
+            width: 25%;
+            height: 100%;
+            background-color: pink;
+            border: 1px solid red;
         }
         #section4{
 			background-color: black;
@@ -117,18 +177,60 @@
 	</header>
 	<div id="fullpage" class="wrapper">
 		<div id="section1" class="section">
-			<div class="video_area">
-				<video src=""></video>
-			</div>
+            <!-- <div style="background-color:black; position:absolute; width:100%; height:100%; opacity:0.25; z-index: 500;"></div> -->
+			<video autoplay muted loop>
+                <source src="img/TheFloridaProject_mainvideo.mp4"type="video/mp4">
+            </video>
+            <div class="contents">
+                <img src="img/logo.png" width="300px;" alt="MoviePicker"><span style="font-size: 30px;">는</span>
+                <!-- <p style="font-size: 50px; font-weight: 500; margin-top: 30px;">당신의 영화를 찾아드립니다</p> -->
+                <h1>당신의 영화를 찾아드립니다.</h1>
+                <h3>만족스런 영화 시청을 도와드립니다.</h3>
+            </div>
 		</div>
 		<div id="section2" class="section">
-			
+            <div class="contents" style="top: 15%;">
+                <h1>취향분석테스트</h1>
+                <h4 style="margin-top: 20px;">당신의 영화 취향은 무엇입니까?</h4>
+                <div id="icons">
+                    <div class="icon_box">
+                        <span class="glyphicon glyphicon-edit" style="color: #d9534f; font-size:45px;"></span>
+                        <p>취향분석테스트를 통해 취향을 분석해드립니다.</p>
+                    </div>
+                    <div class="icon_box">
+                        <span class="glyphicon glyphicon-check" style="color: #d9534f; font-size:45px;"></span>
+                        <p>당신에게 맞는 영화를 추천해드립니다.</p>
+                    </div>
+                    <div class="icon_box">
+                        <span class="glyphicon glyphicon-film" style="color: #d9534f; font-size:45px;"></span>
+                        <p>만족스런 영화 시청을 즐기세요.</p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="btn btn-danger btn-lg">테스트하러 가기&nbsp;<span class="glyphicon glyphicon-triangle-right" style="top:3px;"></span></button>
+                </div> 
+            </div>
 		</div>
 		<div id="section3" class="section">
-			
+			<div class="box_wrapper">
+                <div id="firstrow">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div id="secondrow">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
 		</div>
 		<div id="section4" class="section">
-			
+            <div class="contents">
+                
+            </div>
 		</div>
 	</div>
 	<!-- <div id="right_nav">
@@ -139,20 +241,25 @@
 			<li></li>
 		</ul>
 	</div> -->
+    <footer>
+        
+    </footer>
 </div>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
-	$(window).on("scroll", function(){
-		var scrollTop=$(window).scrollTop();
-		if(scrollTop>150){
-			$('header').css("background-color","transparent");
-		}
-		if(scrollTop<=150){
-			$('header').css("background-color","black");
-		}
+	// $(window).on("scroll", function(){
+	// 	var scrollTop=$(window).scrollTop();
+	// 	if(scrollTop>150){
+	// 		$('header').css("background-color","transparent");
+	// 	}
+	// 	if(scrollTop<=150){
+	// 		$('header').css("background-color","black");
+	// 	}
 
-	 });
+	//  });
+    // var ht= $(window).height();
+    // $("#section2").height(ht);
 
 </script>
 </body>

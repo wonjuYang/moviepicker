@@ -288,19 +288,6 @@
 			
 		}
 
-		.more{
-			display:none;
-		}
-
-		.result_hover{
-			background-color: black;
-			opacity: 0.4;
-			display:block;
-			left:50%;
-			right:50%;
-		}
-
-		
 
 
 
@@ -433,21 +420,21 @@
 	<div class="result_container">
 		<div class="result_part_wrapper c1">
 			<div class="result_part animated fadeIn part1">
-				<div class="more">
+				<div class="more_text" style="display:none;">
 					더 보기
 				</div>
 			</div>
 		</div>
 		<div class="result_part_wrapper c2">
 			<div class="result_part animated fadeIn part2">
-				<div class="more">
+				<div class="more_text" style="display:none;">
 					더 보기
 				</div>
 			</div>
 		</div>
 		<div class="result_part_wrapper c3">
 			<div class="result_part animated fadeIn part3">
-				<div class="more">
+				<div class="more_text" style="display:none;">
 					더 보기
 				</div>
 			</div>
@@ -1024,20 +1011,6 @@
 		$(".result").css("display", "block").addClass('animated fadeIn');;
 
 		$(".count_wrapper").css("display", "none");
-
-		$(".result_part img").hover( 
-     		function(){  
-            $(this).addClass("result_hover");
-   			$("<div>")
-   			.text("더 보기")
-   			.appendTo(".result_part img");
-      		}, 
-      		function(){  
-            $(this).removeClass();
-
-      		} 
-		); 
-
 
 
 
