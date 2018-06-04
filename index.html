@@ -134,7 +134,7 @@
         #section3 .box_wrapper{
         	width: 100%;
         	height: 100%;
-
+            
         }
         #firstrow{
         	width: 100%;
@@ -142,25 +142,27 @@
             background-color: #d9534f;
             display: flex;
             color: white;
-
         }
         #secondrow{
         	width: 100%;
             height: 50%;
-            /*background-color: pink;*/
             display: flex;
             color: #d9534f;
         }
         #section3 .box{
-			width: 25%;
-			text-align: center;
+			width: 400px;
+			
 			overflow: hidden;
 			/*background-color: #d9534f;*/
         }
-        #section3 .box h2{
+        #section3 .text{
             display: flex;
-            align-content: center;
+            justify-content: center;
+            align-items: center;
         }
+        /*#section3 .box h2{
+            
+        }*/
         #section3 .poster{
         	height: 100%;
         	background-attachment: fixed;
@@ -169,6 +171,7 @@
 			background-size: cover;
         }
         #section3 .poster1{
+            /*width: 400px;*/
         	background-image: url("movie_img/rm_beaty.PNG");
         }
         #section3 .poster2{
@@ -186,15 +189,21 @@
         #section4 .icons{
             width: 600px;
             padding-top: 110px;
-            display: flex;
-            
             margin:0 auto;
-            
+            cursor: pointer;
+        }
+        #section4 .icons ul{
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
         }
         #section4 .icons li{
             list-style: none;
-            justify-content: space-between;
         }
+        #section4 .icons img{
+            width: 120px;
+        }
+        
         #section4 footer{
             position: absolute;
 			width: 100%;
@@ -286,27 +295,27 @@
 		<div id="section3" class="section">
 			<div class="box_wrapper">
                 <div id="firstrow">
-                    <div class="box"><h2>액션</h2></div>
+                    <div class="box text"><h2>액션</h2></div>
                     <div class="box poster poster1"><!-- <img src="movie_img/rm_beaty.PNG" alt="로맨스포스터"> --></div>
-                    <div class="box"><h2>SF / 판타지</h2></div>
+                    <div class="box text"><h2>SF / 판타지</h2></div>
                     <div class="box poster poster2"><!-- <img src="movie_img/dk_fl.PNG" alt="독립포스터"> --></div>
                 </div>
                 <div id="secondrow">
                     <div class="box poster poster3"><!-- <img src="img/act_am.jpg" alt="액션포스터"> --></div>
-                    <div class="box"><h2>로맨스</h2></div>
+                    <div class="box text"><h2>로맨스</h2></div>
                     <div class="box poster poster4"><!-- <img src="img/sf_aben.PNG" alt="SF/판타지포스터"> --></div>
-                    <div class="box"><h2>독립</h2></div>
+                    <div class="box text"><h2>독립</h2></div>
                 </div>
             </div>
 		</div>
 		<div id="section4" class="section">
-            <div class="contents" style="top:20%;">
+            <div class="contents" style="top:15%;">
                 <h1>Contact us</h1>
                 <div class="icons">
                     <ul>
-                        <li><span class="glyphicon glyphicon-edit"></span></li>
-                        <li><span class="glyphicon glyphicon-edit"></span></li>
-                        <li><span class="glyphicon glyphicon-edit"></span></li>
+                        <li><img class=img1 src="img/facebook_wh.png" alt="페이스북"></li>
+                        <li><img class=img2 src="img/insta_wh.png" alt="인스타그램"></li>
+                        <li><img class=img3 src="img/twit_wh.png" alt="트위터"></li>
                     </ul>
                 </div>
             </div>
@@ -314,7 +323,7 @@
 				<div class="container">
                     <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
 					<address>
-					<li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 | 대표자: 양원주 | 팀원: 권경아, 손유성, 김미진</li>
+					<li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 &nbsp;|&nbsp; 대표자: 양원주 &nbsp;|&nbsp; 팀원: 권경아, 손유성, 김미진</li>
 				    <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
 					</address>
 				</div>
@@ -342,6 +351,31 @@
 		if(scrollTop<=100){
 			$('header').css("background-color","black");
 		}
+    });
+
+    $(".img1").on("mouseenter",function(){
+        $(this).attr("src", "img/facebook_red.png");
+    });
+
+    $(".img1").on("mouseleave",function(){
+        $(this).attr("src", "img/facebook_wh.png");
+    });
+
+    $(".img2").on("mouseenter",function(){
+        $(this).attr("src", "img/insta_red.png");
+    });
+
+    $(".img2").on("mouseleave",function(){
+        $(this).attr("src", "img/insta_wh.png");
+    });
+
+    $(".img3").on("mouseenter",function(){
+        $(this).attr("src", "img/twit_red.png");
+    });
+
+    $(".img3").on("mouseleave",function(){
+        $(this).attr("src", "img/twit_wh.png");
+    });
 
 	//  });
     // var ht= $(window).height();
