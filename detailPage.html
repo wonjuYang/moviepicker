@@ -14,7 +14,7 @@
             display: flex;
             justify-content: space-between;
             padding:30px 40px;
-            background-color: #E74C3C;
+            background-color: transparent;
         	position: fixed;
         	z-index: 100;
         }
@@ -62,15 +62,15 @@
             color:#d9534f;
         }
 		.container{
-			background-color: white;
+			background-color: black;
 			width: 1240px;
-			height: 1000px;
-			position: absolute;
-			margin-top: 100px;
+			height: 1130px;
+			padding-top: 130px;
+			/*margin-top: 100px;*/
 			margin-bottom: 100px;
 			margin-rigth: 0 auto;
 			margin-left: 0 auto;
-
+			color: #fff;
 		}
 		.wrapper_right{
 			width: 786px;
@@ -84,18 +84,22 @@
 		}
 		.photo_wrap{
 			width: 666px;
-			height: 508px;
+			height: 568px;
 			margin: 20px 60px 15px 60px;
 		}
 		.videoDiv{
 			width: 665px;
 			height: 443px;
 		}
+		.adVideo{
+			width: 665px;
+			heigth: 443px;
+		}
 		.details_wrap{
 			width: 667px;
-			height: 442px;
+			height: 332px;
 			border: 1px #C0BDBD solid;
-			margin: 30px 60px 0px 60px;
+			margin: 60px 60px 0px 60px;
 			font-family: NanumGothic;
 		}
 		.watchInfoHeader{
@@ -105,12 +109,12 @@
 		.infoHeaderInner{
 			width: 626px;
 			height: 40px;
-			margin: 20px 20px;
+			margin: 0px 20px 20px 0px;
 		}
 		.movieTitle{
 			width: 500px;
 			height: 40px;
-			padding-right: 300px;
+			padding-right: 320px;
 			font-weight: bold;
 			font-size: 30px;
 			font-style: Sans-serif;
@@ -140,7 +144,8 @@
 			font-weight: bold;
 			font-family: NanumGothic;
 			text-align: center;
-			color: #000;
+			border: 1px #fff solid;
+			color: #fff;
 
 		}
 		#firstTap{
@@ -212,7 +217,7 @@
 			font-size: 14px;
 			font-family: NanumGothic;
 			font-weight: bold;
-			color: #666262;
+			color: #fff;
 		}
 		.movieListRight a:hover{
 			text-decoration: none;
@@ -228,7 +233,7 @@
 			font-size: 14px;
 			font-family: NanumGothic;
 			font-weight: bold;
-			color: #666262;
+			color: #fff;
 		}
 		.movieListLeft a:hover{
 			text-decoration: none;	
@@ -336,22 +341,7 @@
 		<div class="wrapper_right">
 			<!--스틸컷 div-->
 			<div class="photo_wrap">
-				<!--스틸컷 fotorama-->
-				<div class="fotorama" data-autoplay="true" data-nav="thumbs" data-allowfullscreen="true">
-					<img src="movie_img/stealcut/아저씨1.jpg"/>
-					<img src="movie_img/stealcut/아저씨2.jpg"/>
-					<img src="movie_img/stealcut/아저씨3.jpg"/>
-					<img src="movie_img/stealcut/아저씨4.jpg"/>
-					<img src="movie_img/stealcut/아저씨5.jpg"/>
-					<img src="movie_img/stealcut/아저씨6.jpg"/>
-					<img src="movie_img/stealcut/아저씨7.jpg"/>
-				</div>
-			</div>
-			<!--영화 정보 div-->
-			<div class="details_wrap">
-				<!--영화 제목 div-->
-				<div class="watchInfoHeader">
-					<div class="infoHeaderInner">
+				<div class="infoHeaderInner">
 						<div class="movieTitle">아저씨</div>
 						<span>
 							<span  class="movieRating">평점 </span>
@@ -363,7 +353,24 @@
 							<span class="movieRating">9.22</span>
 						</span>
 					</div>
+				<!--스틸컷 fotorama-->
+				<div class="fotorama" data-autoplay="true" data-nav="thumbs" data-allowfullscreen="true">
+					
+					<a href="https://youtu.be/Ver2ilDRLLk">
+    					<img src="movie_img/.jpg">
+  					</a>
+					<img src="movie_img/stealcut/아저씨1.jpg"/>
+					<img src="movie_img/stealcut/아저씨2.jpg"/>
+					<img src="movie_img/stealcut/아저씨3.jpg"/>
+					<img src="movie_img/stealcut/아저씨4.jpg"/>
+					<img src="movie_img/stealcut/아저씨5.jpg"/>
+					<img src="movie_img/stealcut/아저씨6.jpg"/>
+					<img src="movie_img/stealcut/아저씨7.jpg"/>
 				</div>
+			</div>
+			<!--영화 정보 div-->
+			<div class="details_wrap">
+				
 				<!--영화 세부사항 div-->
 				<div class="watchInfo">
 					<ul class="nav nav-tabs row">
@@ -621,10 +628,6 @@
 						</div>
 					</a>
 				</div>
-
-
-
-
 			</div>
 		</div>
 	</div>
@@ -634,8 +637,8 @@
 	
 <script>
 	$(".detailTaps").on('click', function(){
-		$(".detailTaps").css('background-color', '#fff');
-		$(".detailTaps").css('color', '#000');
+		$(".detailTaps").css('background-color', '#000');
+		$(".detailTaps").css('color', '#dfff');
 		$(this).css('background-color', '#d9534f');
 		$(this).css('color', '#fff');
 
