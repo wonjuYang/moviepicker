@@ -285,7 +285,6 @@
 
 		.result_part img:hover{
 			cursor:pointer;
-			
 		}
 
 
@@ -457,7 +456,9 @@
 		cha:1,
 		ending:2,
 		src:"movie_img/act_am.jpg",
+		anchor:"d_act_am.html",
 		score:0
+
 	}
 
 	var v_act_man={
@@ -466,6 +467,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/act_man.jpg",
+		anchor:"d_act_man.html",
 		score:0
 	}
 
@@ -475,6 +477,7 @@
 		cha:1,
 		ending:2,
 		src:"movie_img/act_ninja.png",
+		anchor:"d_act_ninja.html",
 		score:0
 	}
 
@@ -484,6 +487,7 @@
 		cha:1,
 		ending:null,
 		src:"movie_img/act_taken.png",
+		anchor:"d_act_taken.html",
 		score:0
 	}
 	var v_ani_name={
@@ -492,6 +496,7 @@
 		cha:2,
 		ending:null,
 		src:"movie_img/ani_name.png",
+		anchor:"d_ani_name.html",
 		score:0
 	}
 	var v_ani_time={
@@ -500,6 +505,7 @@
 		cha:1,
 		ending:2,
 		src:"movie_img/ani_time.png",
+		anchor:"d_ani_time.html",
 		score:0
 	}
 	var v_ani_voice={
@@ -993,6 +999,13 @@
 		.attr("title", "1위")
 		.appendTo(".part1");
 
+		$(".part1").click(function(){
+			console.log("clicked")
+			$("<a>")
+			.attr("href", movies_list[1].anchor)
+			.prepend(".part1");
+		});
+
 		$("<img>")
 		.attr("src", movies_list[2].src)
 		.css("left", "50%")
@@ -1000,12 +1013,25 @@
 		.attr("title", "2위")
 		.appendTo(".part2");
 
+		$(".part2").click(function(){
+			$("<a>")
+			.attr("href", movies_list[2].anchor)
+			.prepend(".part2");
+		});
+
 		$("<img>")
 		.attr("src", movies_list[3].src)
 		.css("left", "50%")
 		.css("top", "50%")
 		.attr("title", "3위")
 		.appendTo(".part3");
+
+		$(".part2").click(function(){
+			$("<a>")
+			
+			.attr("href", movies_list[3].anchor)
+			.prepend(this);
+		});
 
 
 		$(".result").css("display", "block").addClass('animated fadeIn');;
