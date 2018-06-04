@@ -6,8 +6,64 @@
    <meta name="viewport" content="width=device-width, initial-scale=1"/>
    <title>moviepicker_rec</title>
    <link rel="stylesheet" href="css/bootstrap.css"/>
-   <style>
+   <link rel="stylesheet" href="css/animate.css"/>
 
+   <style>
+		body{
+			font-family: "Nanum Barun Gothic",sans-serif;
+		}
+		header{
+			width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding:30px 40px;
+            background-color: black;
+        	position: fixed;
+        	z-index: 100;
+        }
+        .glyphicon-eye-open{
+         	color: white;
+         	margin: 6px 6px 0px 0px;
+         	font-size: 30px;
+        }
+        .logo img{
+			width: 200px;
+			position: absolute;
+        }
+        .menu{
+            background-color: transparent;
+            bottom:auto;
+            left:auto;
+            opacity:1;
+            pointer-events: all;
+            right:auto;
+        }
+
+        .menu ul{
+            list-style-type:none;
+            left:auto;
+            max-width: none;
+            display: flex;
+            top:auto;
+            transform: none;
+            width:auto;
+            margin: 10px 35px 0px 0px;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left:30px;
+            font-size: 18px;
+            font-weight:bold;
+        }
+	    .menu a{
+            text-decoration:none;
+            color:white;
+        }
+        .menu a:hover{
+            text-decoration:none;
+            color:#d9534f;
+        }
 
    		body{
    			background-color: black;
@@ -15,8 +71,8 @@
    		.rec_title{
    			color:white;
    			width:100%;
-   			height:200px;
-   			margin-top:165px;
+   			height:250px;
+   			padding-top:100px;
    			display:flex;
    			flex-flow:column wrap;
    			align-items:center;
@@ -40,6 +96,7 @@
 			text-align: center;
 			width:1000px;
 			margin: 0 auto;
+			
 		}
 
 		.que1{
@@ -153,8 +210,8 @@
    		 	color:black;
 		}
 
-		
 
+		
 		.answer_wrapper:hover{
 			background-color: #d9534f;
 			cursor:pointer;
@@ -182,16 +239,56 @@
 		}
 
 		.result_title{
+			margin-top: 20px;
+			margin-bottom: 20px;
 			display:flex;
 			justify-content: center;
-
 		}
 
 		.result h3{
 			color:white;
 
-
 		}
+
+		.result_container{
+			height:500px;
+			display:flex;
+			justify-content:center;
+			align-content: center;
+		}
+
+
+		.result_part{
+			width:260px;
+			height:400px;
+			background-color:gray;
+			margin:10px;
+			overflow:hidden;
+		}
+
+		.fadeIn{
+			animation-duration: 1.8s; 
+		}
+
+		.c2 .fadeIn{
+			animation-delay:0.3s;
+		}
+
+		.c3 .fadeIn{
+			animation-delay:0.6s;
+		}
+
+		.result_part img{
+			width:100%;
+			height:100%;
+		}
+
+		.result_part img:hover{
+			cursor:pointer;
+			
+		}
+
+
 
 
 
@@ -202,7 +299,16 @@
    </style>
 </head>
 <body>
-
+<header>
+		<a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+		<div class="menu">
+			<ul>
+				<li><a href="index.html">홈</a></li>
+				<li><a href="recommend.html">테스트</a></li>
+				<li><a href="list.html">장르</a></li>
+			</ul>
+		</div>
+	</header>
 <div class="rec_title">
 	<h2>영화 취향 테스트</h2>
 	<h5>당신의 영화를 찾아드립니다.</h5>
@@ -227,7 +333,7 @@
 		<div class="answer_box">
 			<div id="que1_1a" class="answer_wrapper">
 				<div id="que1_1aa" class="answer">
-					아이
+					자녀
 				</div>
 			</div>
 			<div id="que1_1b" class="answer_wrapper">
@@ -246,44 +352,43 @@
 				</div>
 			</div>
 		</div>	
-
-		<button class="btn btn-danger next_btn btn1">다음</button>
+		<button class="btn btn-danger next_btn btn1" disabled="disabled">다음</button>
 	</div>
 	<div class="que2">
 		<div class="question">
-			<h3>영화의 스케일은 어땠으면 좋겠습니까?</h3>
+			<h3>좋아하는 영화의 분위기는 어떤가요?</h3>
 		</div>
 		<div class="answer_box">
 			<div id="que2_1a" class="answer_wrapper">
 				<div id="que2_1aa" class="answer">
-					BIG
+					동적, 박진감, 스릴
 				</div>
 			</div>
 			<div id="que2_1b" class="answer_wrapper">
 				<div id="que2_1bb" class="answer">
-					SOSO
+					정적, 잔잔함, 평화
 				</div>
 			</div>
 		</div>	
-		<button class="btn btn-danger next_btn btn2">다음</button>
+		<button class="btn btn-danger next_btn btn2" disabled="disabled">다음</button>
 	</div>
 	<div class="que3">
 		<div class="question">
-			<h3>한국영화가 취향이신가요 외국영화가 취향이신가요</h3>
+			<h3>좋아하는 영화의 성격은 어떤가요?</h3>
 		</div>
 		<div class="answer_box">
 			<div id="que3_1a" class="answer_wrapper">
 				<div id="que3_1aa" class="answer">
-					한국 영화
+					대중성,상업적
 				</div>
 			</div>
 			<div id="que3_1b" class="answer_wrapper">
 				<div id="que3_1bb" class="answer">
-					외국 영화
+					 예술성,비상업적
 				</div>
 			</div>
 		</div>	
-		<button class="btn btn-danger next_btn btn3">다음</button>	
+		<button class="btn btn-danger next_btn btn3" disabled="disabled">다음</button>	
 	</div>
 	<div class="que4">
 		<div class="question">
@@ -301,20 +406,253 @@
 				</div>
 			</div>
 		</div>	
-		<button class="btn btn-danger next_btn btn4">결과 보기</button>	
+		<button class="btn btn-danger next_btn btn4" disabled="disabled">결과 보기</button>	
 	</div>
 </div>
+
+
 
 
 <div class="result">
 	<div class="result_title">
 		<h3>당신의 영화 취향</h3>
 	</div>
+	<div class="result_container">
+		<div class="result_part_wrapper c1">
+			<div class="result_part animated fadeIn part1">
+				<div class="more_text" style="display:none;">
+					더 보기
+				</div>
+			</div>
+		</div>
+		<div class="result_part_wrapper c2">
+			<div class="result_part animated fadeIn part2">
+				<div class="more_text" style="display:none;">
+					더 보기
+				</div>
+			</div>
+		</div>
+		<div class="result_part_wrapper c3">
+			<div class="result_part animated fadeIn part3">
+				<div class="more_text" style="display:none;">
+					더 보기
+				</div>
+			</div>
+		</div>
+		
+
+
+	</div>
 </div>
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
+
+
+
+	var v_act_am={
+		grade:15,
+		mood:1,
+		cha:1,
+		ending:2,
+		src:"movie_img/act_am.jpg",
+		score:0
+	}
+
+	var v_act_man={
+		grade:19,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/act_man.jpg",
+		score:0
+	}
+
+	var v_act_ninja={
+		grade:19,
+		mood:1,
+		cha:1,
+		ending:2,
+		src:"movie_img/act_ninja.png",
+		score:0
+	}
+
+	var v_act_taken={
+		grade:15,
+		mood:1,
+		cha:1,
+		ending:null,
+		src:"movie_img/act_taken.png",
+		score:0
+	}
+	var v_ani_name={
+		grade:12,
+		mood:2,
+		cha:2,
+		ending:null,
+		src:"movie_img/ani_name.png",
+		score:0
+	}
+	var v_ani_time={
+		grade:0,
+		mood:1,
+		cha:1,
+		ending:2,
+		src:"movie_img/ani_time.png",
+		score:0
+	}
+	var v_ani_voice={
+		grade:0,
+		mood:null,
+		cha:2,
+		ending:null,
+		src:"movie_img/ani_voice.png",
+		score:0
+	}
+	var v_ani_juto={
+		grade:0,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/ani_wolf.png",
+		score:0
+	}
+	var v_co_bro={
+		grade:12,
+		mood:1,
+		cha:1,
+		ending:2,
+		src:"movie_img/co_bro.png",
+		score:0
+	}
+	var v_co_lucky={
+		grade:15,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/co_lucky.png",
+		score:0
+	}
+	var v_co_padding={
+		grade:0,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/co_padding.png",
+		score:0
+	}
+	var v_co_she={
+		grade:15,
+		mood:2,
+		cha:1,
+		ending:1,
+		src:"movie_img/co_she.jpg",
+		score:0
+	}
+	
+	var v_dk_fl={
+		grade:15,
+		mood:2,
+		cha:2,
+		ending:2,
+		src:"movie_img/dk_fl.png",
+		score:0
+	}
+	var v_dk_gea={
+		grade:15,
+		mood:2,
+		cha:2,
+		ending:1,
+		src:"movie_img/dk_gea.png",
+		score:0
+	}
+	var v_dk_han={
+		grade:19,
+		mood:1,
+		cha:2,
+		ending:2,
+		src:"movie_img/dk_han.png",
+		score:0
+	}
+	var v_dk_we={
+		grade:15,
+		mood:2,
+		cha:2,
+		ending:null,
+		src:"movie_img/dk_we.png",
+		score:0
+	}
+	var v_rm_about={
+		grade:15,
+		mood:2,
+		cha:1,
+		ending:1,
+		src:"movie_img/rm_about.png",
+		score:0
+	}
+	var v_rm_beaty={
+		grade:12,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/rm_beaty.png",
+		score:0
+	}
+	var v_rm_cl={
+		grade:12,
+		mood:2,
+		cha:2,
+		ending:2,
+		src:"movie_img/rm_cl.png",
+		score:0
+	}
+	var v_rm_girl={
+		grade:15,
+		mood:2,
+		cha:2,
+		ending:1,
+		src:"movie_img/rm_girl.png",
+		score:0
+	}
+	var v_sf_aben={
+		grade:12,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/sf_aben.png",
+		score:0
+	}
+	var v_sf_hung={
+		grade:15,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/sf_hung.png",
+		score:0
+	}
+	var v_sf_inter={
+		grade:12,
+		mood:1,
+		cha:1,
+		ending:1,
+		src:"movie_img/sf_inter.png",
+		score:0
+	}
+	var v_sf_sin={
+		grade:12,
+		mood:1,
+		cha:1,
+		ending:2,
+		src:"movie_img/sf_sin.png",
+		score:0
+	}
+
+	var movies_list=[v_act_am, v_act_man, v_act_ninja, v_act_taken, v_co_bro, v_co_lucky, v_co_she, v_co_padding, v_sf_aben, v_sf_inter, v_sf_hung, v_sf_sin, v_rm_about, v_rm_girl, v_rm_cl, v_rm_beaty, v_dk_we, v_dk_han, v_dk_gea,v_dk_fl, v_ani_juto, v_ani_voice, v_ani_time, v_ani_name];
+
+
+
+
 
 
 	var que1_1=0;
@@ -327,6 +665,10 @@
 	var que3_2=0;
 	var que4_1=0;
 	var que4_2=0;
+
+
+	$(".rec_title").addClass('animated fadeIn');
+	$("#quiz").addClass('animated fadeIn');
 
 
 	
@@ -354,6 +696,11 @@
 		que1_2=0;
 		que1_3=0;
 		que1_4=0;
+
+
+		if(que1_1==1||que1_2==1||que1_3==1||que1_4==1){
+        	$(".btn1").attr("disabled", false);
+    	}
 	});
 
 	$("#que1_1b").click(function(){
@@ -368,6 +715,10 @@
 		que1_2=1;
 		que1_3=0;
 		que1_4=0;
+
+		if(que1_1==1||que1_2==1||que1_3==1||que1_4==1){
+       		$(".btn1").attr("disabled", false);
+    	}
 	});
 
 	$("#que1_1c").click(function(){
@@ -382,6 +733,10 @@
 		que1_2=0;
 		que1_3=1;
 		que1_4=0;
+
+		if(que1_1==1||que1_2==1||que1_3==1||que1_4==1){
+        	$(".btn1").attr("disabled", false);
+    	}
 	});
 	$("#que1_1d").click(function(){
 		$("#que1_1a").removeClass("answer_wrapper_select");
@@ -395,15 +750,60 @@
 		que1_2=0;
 		que1_3=0;
 		que1_4=1;
+
+		if(que1_1==1||que1_2==1||que1_3==1||que1_4==1){
+        	$(".btn1").attr("disabled", false);
+   		}
 	});
 
+	
+
 	$(".btn1").click(function(){
+
+
+		if(que1_1==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].grade==19){
+					movies_list[i].score--;
+					movies_list[i].score--;
+					movies_list[i].score--;
+					movies_list[i].score--;
+					movies_list[i].score--;
+
+				}
+			}
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].grade==0){
+					movies_list[i].score++;
+				}
+			}
+			for(var i=20; i<24; i++){
+				movies_list[i].score++;
+				}
+
+		}
+
+		if(que1_2==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].grade==15||movies_list[i].grade==12){
+					movies_list[i].score++;
+				}
+			}
+		}
+
+
+
+
+
+
+
+
 		$(".que1").css("display", "none");
-		$(".que2").css("display", "block");
+		$(".que2").css("display", "block").addClass('animated fadeIn');
+		
 
 		$("#count1").css("background-color", "#d9534f").css("color", "#000");
 		$("#line1").css("background-color", "#d9534f");
-
 
 
 	});
@@ -418,6 +818,10 @@
 		que2_1=1;
 		que2_2=0;
 
+		if(que2_1==1||que2_2==1){
+        	$(".btn2").attr("disabled", false);
+   		}
+
 	});
 
 	$("#que2_1b").click(function(){
@@ -428,12 +832,40 @@
 		que2_1=0;
 		que2_2=1;
 
+		if(que2_1==1||que2_2==1){
+        	$(".btn2").attr("disabled", false);
+   		}
+
 	});
 
 
 	$(".btn2").click(function(){
+
+
+		if(que2_1==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].mood==1){
+					movies_list[i].score++;
+				}
+			}
+
+			for(var i=0; i<4; i++){
+				movies_list[i].score++;
+				movies_list[i].score++;
+			}
+		}
+
+		if(que2_2==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].mood==2){
+					movies_list[i].score++;
+				}
+			}
+		}
+
+
 		$(".que2").css("display", "none");
-		$(".que3").css("display", "block");
+		$(".que3").css("display", "block").addClass('animated fadeIn');;
 
 		$("#count2").css("background-color", "#d9534f").css("color", "#000");
 		$("#line2").css("background-color", "#d9534f");
@@ -447,6 +879,10 @@
 		que3_1=1;
 		que3_2=0;
 
+		if(que3_1==1||que3_2==1){
+        	$(".btn3").attr("disabled", false);
+   		}
+
 	});
 
 	$("#que3_1b").click(function(){
@@ -457,12 +893,38 @@
 		que3_1=0;
 		que3_2=1;
 
+		if(que3_1==1||que3_2==1){
+        	$(".btn3").attr("disabled", false);
+   		}
+
 	});
 
 
 	$(".btn3").click(function(){
+
+		if(que3_1==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].cha==1){
+					movies_list[i].score++;
+				}
+			}
+		}
+
+		if(que3_2==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].cha==2){
+					movies_list[i].score++;
+				}
+			}
+
+			for(var i=16; i<20; i++){
+				movies_list[i].score++;
+			}
+		}
+
+
 		$(".que3").css("display", "none");
-		$(".que4").css("display", "block");
+		$(".que4").css("display", "block").addClass('animated fadeIn');;
 
 		$("#count3").css("background-color", "#d9534f").css("color", "#000");
 		$("#line3").css("background-color", "#d9534f");
@@ -477,6 +939,10 @@
 		que4_1=1;
 		que4_2=0;
 
+		if(que4_1==1||que4_2==1){
+        	$(".btn4").attr("disabled", false);
+   		}
+
 	});
 
 	$("#que4_1b").click(function(){
@@ -487,14 +953,67 @@
 		que4_1=0;
 		que4_2=1;
 
+		if(que4_1==1||que4_2==1){
+        	$(".btn4").attr("disabled", false);
+   		}
+
 	});
 
 
 	$(".btn4").click(function(){
+
+		if(que4_1==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].ending==1){
+					movies_list[i].score++;
+				}
+			}
+		}
+
+		if(que4_2==1){
+			for(var i=0; i<movies_list.length; i++){
+				if(movies_list[i].ending==2){
+					movies_list[i].score++;
+				}
+			}
+		}
+
+
+		
+
+		movies_list.sort(function (f, s) { return s.score-f.score; });
+
+
 		$(".que4").css("display", "none");
-		$(".result").css("display", "block");
+
+		$("<img>")
+		.attr("src", movies_list[1].src)
+		.css("left", "50%")
+		.css("top", "50%")
+		.attr("title", "1위")
+		.appendTo(".part1");
+
+		$("<img>")
+		.attr("src", movies_list[2].src)
+		.css("left", "50%")
+		.css("top", "50%")
+		.attr("title", "2위")
+		.appendTo(".part2");
+
+		$("<img>")
+		.attr("src", movies_list[3].src)
+		.css("left", "50%")
+		.css("top", "50%")
+		.attr("title", "3위")
+		.appendTo(".part3");
+
+
+		$(".result").css("display", "block").addClass('animated fadeIn');;
 
 		$(".count_wrapper").css("display", "none");
+
+
+
 	});
 
 
