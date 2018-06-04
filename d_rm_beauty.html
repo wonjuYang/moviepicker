@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>MovieDetails</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+		body{
+			background-color: black;
+		}
+		header{
+			width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding:30px 40px;
+            background-color: transparent;
+        	z-index: 100;
+        }
+        .glyphicon-eye-open{
+         	color: white;
+         	margin: 6px 6px 0px 0px;
+         	font-size: 30px;
+        }
+        .logo img{
+			width: 200px;
+			position: absolute;
+        }
+        .menu{
+            background-color: transparent;
+            bottom:auto;
+            left:auto;
+            opacity:1;
+            pointer-events: all;
+            right:auto;
+        }
+
+        .menu ul{
+            list-style-type:none;
+            left:auto;
+            max-width: none;
+            display: flex;
+            top:auto;
+            transform: none;
+            width:auto;
+            margin: 10px 35px 0px 0px;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left:30px;
+            font-size: 18px;
+            font-weight:bold;
+        }
+	    .menu a{
+            text-decoration:none;
+            color:white;
+        }
+        .menu a:hover{
+            text-decoration:none;
+            color:#d9534f;
+        }
+		.container{
+			background-color: black;
+			width: 1240px;
+			height: 1130px;
+			
+			/*margin-top: 100px;*/
+			margin-bottom: 100px;
+			margin-rigth: 0 auto;
+			margin-left: 0 auto;
+			color: #fff;
+		}
+		.wrapper_right{
+			width: 786px;
+			height: 1000px;
+			float: left;
+		}
+		.wrapper_left{
+			width: 422px;
+			height: 1000px;
+			float: left;
+		}
+		.photo_wrap{
+			width: 666px;
+			height: 568px;
+			margin: 20px 60px 15px 60px;
+		}
+		.videoDiv{
+			width: 665px;
+			height: 443px;
+		}
+		.adVideo{
+			width: 665px;
+			heigth: 443px;
+		}
+		.details_wrap{
+			width: 667px;
+			height: 352px;
+			border: 1px #C0BDBD solid;
+			margin: 60px 60px 0px 60px;
+			font-family: NanumGothic;
+		}
+		.watchInfoHeader{
+			width: 666px;
+			height: 60px;	
+		}
+		.infoHeaderInner{
+			width: 626px;
+			height: 40px;
+			margin: 0px 20px 20px 0px;
+		}
+		.movieTitle{
+			width: 500px;
+			height: 40px;
+
+			font-weight: bold;
+			font-size: 30px;
+			font-style: Sans-serif;
+			display: inline;
+		}
+		.movieRating{
+			font-weight: bold;
+			font-size: 20px;
+			font-style: Sans-serif;
+		}
+		.star{
+			float: right;
+			padding-top:10px;
+		}
+		.glyphicon-star{
+			color: #CB2E2E;
+		}
+		.glyphicon-star-empty{
+			color: #CB2E2E;
+		}
+		.watchInfo{
+			width: 666px;
+			height: 322px;
+			font-family: NanumGothic;
+		}
+		.nav-tabs{
+			margin: 0px;
+		}
+		.detailTaps {
+			font-size: 16px;
+			font-weight: bold;
+			font-family: NanumGothic;
+			text-align: center;
+			border: 1px #fff solid;
+			color: #fff;
+
+		}
+		#firstTap{
+			background-color: #d9534f;
+			color: #fff;
+		}
+		.tab-content{
+			width: 666px;
+			height: 278px;
+		}
+		.col-xs-4{
+			padding: 0px;
+		}
+		#summary{
+			font-size: 16px;
+			margin: 20px;
+		}
+		.summaryHeader{
+			font-weight: bold;
+			margin-top: 10px;
+			margin-bottom: 10px; 
+		}
+		.summaryContent{
+			color:#7d7d7d;
+		}
+		.tab-pane{
+			margin: 10px 10px;
+		}
+		#actor{
+			font-weight: bold;
+			font-size: 16px;
+			margin: 20px;
+		}
+		.director{
+			padding-bottom: 10px;
+		}
+		.mainActor{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.actorTitles{
+			padding-right: 10px;
+			font-weight: bold;
+		}
+		.actorDetails{
+			color:#7d7d7d;
+		}
+		.subActor{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.movieListTitleDiv{
+			margin: 20px;
+		}
+		.movieListTitle{
+			font-size: 20px;
+			font-weight: bold;
+			font-family: NanumGothic;
+		}
+		.movieListDiv{
+			height: 930px;
+			overflow: auto;
+		}
+		.movieListRight{
+			margin: 0px 40px 20px 10px;
+			float: left;
+		}
+		.movieListRight a{
+			font-size: 14px;
+			font-family: NanumGothic;
+			font-weight: bold;
+			color: #fff;
+		}
+		.movieListRight a:hover{
+			text-decoration: none;
+		}
+		.movieListRight div{
+			padding-top: 10px;
+		}
+		.movieListLeft{
+			margin: 0px 10px 20px 40px;
+			float: left;
+		}
+		.movieListLeft a{
+			font-size: 14px;
+			font-family: NanumGothic;
+			font-weight: bold;
+			color: #fff;
+		}
+		.movieListLeft a:hover{
+			text-decoration: none;	
+		}
+		.movieListLeft div{
+			padding-top: 10px;
+		}
+		#details{
+			margin: 20px;
+		}
+		.detailsInfoDiv{
+			padding-bottom: 10px;
+		}
+		.detailsInfo{
+			float: left;
+		}
+		#infoP1{
+			padding-right: 10px;
+			font-weight: bold;
+		}
+		#infoP2{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right: 1px solid #E1DBDB;
+		}
+		#infoP3{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right: 1px solid #E1DBDB;
+		}
+		#infoP4{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right: 1px solid #E1DBDB;
+		}
+		#infoP5{
+			padding-right: 10px;
+			padding-left: 10px;
+			font-weight: bold;
+		}
+		#infoP6{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.detailsAgeRestrictionDiv{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.detailsAgeRestriction{
+			float: left;
+		}
+		#ageRestrictionP1{
+			padding-right: 20px;
+			font-weight: bold;
+		}
+		#ageRestrictionP2{
+			color: #666262;
+			padding-left: 10px;
+		}
+		.detailsTrailerDiv{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.detailsTrailer{
+			float: left;
+		}
+		#trailerP1{
+			padding-right: 20px;
+			font-weight: bold;
+		}
+		#trailerP2{
+			padding-left: 10px;
+		}
+		.active{
+
+		}
+
+
+	</style>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+
+	<!-- fotorama.css & fotorama.js. -->
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+</head>
+<body>
+	<div>
+	<header>
+		<a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+		<div class="menu">
+			<ul>
+				<li><a href="">홈</a></li>
+				<li><a href="">테스트</a></li>
+				<li><a href="">장르</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="container">
+		<div class="wrapper_right">
+			<!--스틸컷 div-->
+			<div class="photo_wrap">
+				<div class="infoHeaderInner">
+						<div class="movieTitle">뷰티인사이드</div>
+						<span class="star">
+							<span  class="movieRating">평점 </span>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star-empty"> </i>
+							<span class="movieRating">8.25</span>
+						</span>
+					</div>
+				<!--스틸컷 fotorama-->
+				<div class="fotorama" data-autoplay="true" data-nav="thumbs" data-allowfullscreen="true">
+					
+					<a href="https://youtu.be/ESPFTY8Y-xM">
+    					<img src="movie_img/stealcut/뷰티인사이드8.jpg">
+  					</a>
+					<img src="movie_img/stealcut/뷰티인사이드1.jpg"/>
+					<img src="movie_img/stealcut/뷰티인사이드2.jpg"/>
+					<img src="movie_img/stealcut/뷰티인사이드3.jpg"/>
+					<img src="movie_img/stealcut/뷰티인사이드4.jpg"/>
+					<img src="movie_img/stealcut/뷰티인사이드5.jpg"/>
+					<img src="movie_img/stealcut/뷰티인사이드6.jpg"/>
+					<img src="movie_img/stealcut/뷰티인사이드7.jpg"/>
+				</div>
+			</div>
+			<!--영화 정보 div-->
+			<div class="details_wrap">
+				
+				<!--영화 세부사항 div-->
+				<div class="watchInfo">
+					<ul class="nav nav-tabs row">
+						<li class="active col-xs-4"><a class="detailTaps" id="firstTap" data-toggle="tab" href="#details">세부사항</a></li>
+						<li class="col-xs-4"><a class="detailTaps" data-toggle="tab" href="#summary">줄거리</a></li>
+						<li class="col-xs-4"><a class="detailTaps " data-toggle="tab" href="#actor">배우/감독</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active fade in" id="details">
+							<div class="detailsInfoDiv">
+								<p class="detailsInfo" id="infoP1">개요</p>
+								<p class="detailsInfo" id="infoP2">멜로, 로맨스</p>
+								<p class="detailsInfo" id="infoP3">127분</p>
+								<p class="detailsInfo" id="infoP4">한국</p>
+								<p class="detailsInfo" id="infoP5">개봉일</p>
+								<p id="infoP6">2015년 8월 20일</p>
+							</div>
+							<div class="detailsAgeRestrictionDiv">
+								<p class="detailsAgeRestriction" id="ageRestrictionP1">등급</p>
+								<p id="ageRestrictionP2">12세 관람가</p>
+							</div>
+							<div class="detailsTrailerDiv">
+								<p class="detailsTrailer" id="trailerP1">메인 예고편</p>
+								<a href="https://youtu.be/ESPFTY8Y-xM" id="trailerP2">https://youtu.be/ESPFTY8Y-xM</a>
+							</div>
+						</div>
+						<div class="tab-pane fade in" id="summary">
+							<h4 class="summaryHeader">정신은 그대로 인데 몸이 바뀐다?</h4>
+							<br>
+							<p class="summaryContent">
+									남자, 여자, 아이, 노인.. 심지어 외국인까지! 자고 일어나면 매일 다른 모습으로 변하는 남자, ‘우진’. 
+			 						그에게 처음으로 비밀을 말하고 싶은 단 한 사람이 생겼다.
+									드디어 D-DAY! ‘우진’은 그녀에게 자신의 마음을 고백하기로 하는데…
+									“초밥이 좋아요? 스테이크가 좋아요?
+			 						사실.. 연습 엄청 많이 했어요. 
+			 						오늘 꼭 그쪽이랑 밥 먹고 싶어서…”
+							</p>
+						</div>
+						<div class="tab-pane fade" id="actor">
+							<div class="director">
+								<h5>
+									<span class="actorTitles" id="directorTitle">감독</span>
+									<span class="actorDetails">백종열</span>
+								</h5>
+							</div>
+							<div class="mainActor">
+								<h5>
+									<span class="actorTitles" id="mainActorTitle">주연</span>
+									<span class="actorDetails">한효주, 김대명</span>
+								</h5>
+							</div>
+							<div class="subActor">
+								<h5>
+									<span class="actorTitles">조연</span>
+									<span class="actorDetails">도지한, 배성우, 박신혜, 이범수, 박서준, 김상호</span>
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper_left">
+			<div class="movieListTitleDiv">
+				<div class="movieListTitle">
+					최신 인기영화
+				</div>
+			</div>
+			<div class="movieListDiv">
+				<div class="movieListLeft">
+					<a href="d_act_am.html">
+						<img src="movie_img/resizedImg/act_am.jpg" alt="">
+						<div>
+							<span>암살</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_act_man.html">
+						<img src="movie_img/resizedImg/act_man.jpg" alt="">
+						<div>
+							<span>아저씨</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_act_ninja.html">
+						<img src="movie_img/resizedImg/act_ninja.png" alt="">
+						<div>
+							<span>닌자 어쌔신</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_act_taken.html">
+						<img src="movie_img/resizedImg/act_taken.png" alt="">
+						<div>
+							<span>테이큰</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_ani_name.html">
+						<img src="movie_img/resizedImg/ani_name.png" alt="">
+						<div>
+							<span>너의 이름은</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_ani_time.html">
+						<img src="movie_img/resizedImg/ani_time.png" alt="">
+						<div>
+							<span>시간을 달리는 소녀</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_ani_voice.html">
+						<img src="movie_img/resizedImg/ani_voice.png" alt="">
+						<div>
+							<span>목소리의 형태</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_ani_zoo.html">
+						<img src="movie_img/resizedImg/ani_zoo.png" alt="">
+						<div>
+							<span>주토피아</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_co_bro.html">
+						<img src="movie_img/resizedImg/co_bro.png" alt="">
+						<div>
+							<span>형</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_co_lucky.html">
+						<img src="movie_img/resizedImg/co_lucky.png" alt="">
+						<div>
+							<span>럭키</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_co_padding.html">
+						<img src="movie_img/resizedImg/co_padding.png" alt="">
+						<div>
+							<span>패딩턴</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_co_she.html">
+						<img src="movie_img/resizedImg/co_she.jpg" alt="">
+						<div>
+							<span>수상한 그녀</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_dk_fl.html">
+						<img src="movie_img/resizedImg/dk_fl.png" alt="">
+						<div>
+							<span>플로리다 프로젝트</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_dk_gea.html">
+						<img src="movie_img/resizedImg/dk_gea.png" alt="">
+						<div>
+							<span>귀향</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_dk_han.html">
+						<img src="movie_img/resizedImg/dk_han.png" alt="">
+						<div>
+							<span>한공주</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_dk_we.html">
+						<img src="movie_img/resizedImg/dk_we.png" alt="">
+						<div>
+							<span>우리의 20세기</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_rm_about.html">
+						<img src="movie_img/resizedImg/rm_about.png" alt="">
+						<div>
+							<span>어바웃 타임</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_rm_beauty.html">
+						<img src="movie_img/resizedImg/rm_beaty.png" alt="">
+						<div>
+							<span>뷰티인사이드</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_rm_cl.html">
+						<img src="movie_img/resizedImg/rm_cl.png" alt="">
+						<div>
+							<span>클래식</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_rm_girl.html">
+						<img src="movie_img/resizedImg/rm_girl.png" alt="">
+						<div>
+							<span>너의 소녀시대</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_sf_aben.html">
+						<img src="movie_img/resizedImg/sf_aben.png" alt="">
+						<div>
+							<span>어벤져스</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_sf_hung.html">
+						<img src="movie_img/resizedImg/sf_hung.png" alt="">
+						<div>
+							<span>헝거게임</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_sf_inter.html">
+						<img src="movie_img/resizedImg/sf_inter.png" alt="">
+						<div>
+							<span>인터스텔라</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_sf_sin.html">
+						<img src="movie_img/resizedImg/sf_sin.png" alt="">
+						<div>
+							<span>신과함께</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>
+	
+<script>
+	$(".detailTaps").on('click', function(){
+		$(".detailTaps").css('background-color', '#000');
+		$(".detailTaps").css('color', '#dfff');
+		$(this).css('background-color', '#d9534f');
+		$(this).css('color', '#fff');
+
+	})
+</script>
+</body>
+</html>
