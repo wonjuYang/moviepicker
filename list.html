@@ -197,7 +197,7 @@
             display: flex;
             justify-content: space-between;
             padding:30px 40px;
-            background-color: #E74C3C;
+            background-color: black;
         	position: fixed;
         	z-index: 100;
         }
@@ -386,8 +386,8 @@
 			<div class="container">				
 				<div class="row">
 			 		<h3 style="color:white">&nbsp;&nbsp;액션 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
-			 		<div class="col-sm-3 col-xs-6 c1">
-			 			<figure class="movie animated fadeIn">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie one">
 				 			<img src="movie_img/act_man.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -403,8 +403,8 @@
 				 			<p style="color:gray;">한국영화:HD <br/> 출연:원빈,김새롬</p>
 			 			</figure>						
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c2">
-			 			<figure class="movie animated fadeIn">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie two">
 				 			<img src="movie_img/act_am.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -423,8 +423,8 @@
 				 			<p style="color:gray;">한국영화:HD <br/> 출연:하정우,이정재,전지현..</p>
 			 			</figure>								
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c3">
-			 			<figure class="movie animated fadeIn">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie three">
 				 			<img src="movie_img/act_ninja.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -440,8 +440,8 @@
 				 			<p style="color:gray;">해외영화:HD <br/> 출연:비(정지훈)</p>
 			 			</figure>								
 			 		</div>
-			 		<div class="col-sm-3 col-xs-6 c4">
-			 			<figure class="movie animated fadeIn">
+			 		<div class="col-sm-3 col-xs-6">
+			 			<figure class="movie four">
 				 			<img src="movie_img/act_taken.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
@@ -854,23 +854,26 @@
 			 		</div>
 			 		<div class="col-sm-3 col-xs-6">
 			 			<figure class="movie four">
-				 			<img src="movie_img/ani_wolf.png" class="img-responsive movie_img"/>
+				 			<img src="movie_img/ani_zoo.png" class="img-responsive movie_img"/>
 				 			<figcaption>
 				 				<a href="#"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
-				 				<h3>늑대 아이
+				 				<h3>주토피아
 				 				</h3>
-				 				<p>내가 사랑하게 된 사람은… 늑대인간이었습니다.
-									평범한 여대생 '하나'는 강의실에서 우연히 만나게 된 '그'에게 반하게 되고, 곧 사랑에 빠지게 된다. 하지만 '그'는 평범한 사람이 아닌 늑대인간이었다. 
-			 						너희가 늑대아이라는 것은 모두에게 비밀이야! 
-			 						늑대인간과의 동화 같은 사랑 후에 남은 것은 두 아이뿐... 
-			 						눈 내리는 날에 태어난 누이 '유키', 비 내리는 날 태어난 동생 '아메'. 
-			 						두 아이에게는 커다란 비밀이 있는데... 
-			 						바로 흥분(!)하면 귀가 쫑긋! 꼬리가 쏘옥~ 나오는 늑대아이라는 것!  </p>
+				 				<p>누구나 살고 싶은 도시 1위, 주토피아 
+ 								연쇄 실종 사건 발생! 
+ 								“미치도록 잡고 싶었다!” 
+  
+ 								교양 있고 세련된 라이프 스타일을 주도하는 도시 주토피아. 
+ 								이 곳을 단숨에 혼란에 빠트린 연쇄 실종사건이 발생한다! 
+ 								주토피아 최초의 토끼 경찰관 주디 홉스는 48시간 안에 사건 해결을 지시 받자 
+ 								뻔뻔한 사기꾼 여우 닉 와일드에게 협동 수사를 제안하는데… 
+  
+ 								스릴 넘치는 추격전의 신세계가 열린다!</p>
 				 			</figcaption>
-				 			<p class="title">늑대 아이</p>
-				 			<p style="color:gray;">해외영화:HD <br/> 출연:미야자키 아오이,오오사와 타카오</p>
+				 			<p class="title">주토피아</p>
+				 			<p style="color:gray;">해외영화:HD <br/> 출연:지니퍼 굿윈,제이슨 베이트먼...</p>
 			 			</figure>						
 			 		</div>	
 			 	</div>
@@ -905,9 +908,31 @@
 	// 	$(this).css("background-color","red");
 	// });
 
+	$("#section1 .one").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c1").one("animationend",function(){
+		$(this).removeClass("c1");
+	});
+
+	$("#section1 .two").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c2").one("animationend",function(){
+		$(this).removeClass("c2");
+	});
+
+	$("#section1 .three").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c3").one("animationend",function(){
+		$(this).removeClass("c3");
+	});
+
+	$("#section1 .four").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c4").one("animationend",function(){
+		$(this).removeClass("c4");
+	});
+
 	$("#act").click(function(){
-
-
 
 		$("#section1 .one").addClass("animated fadeIn").one("animationend",function(){
 			$(this).removeClass("animated fadeIn");
