@@ -251,12 +251,11 @@
 		}
 
 		.result_container{
-			height:500px;
+			height:450px;
 			display:flex;
 			justify-content:center;
 			align-content: center;
 		}
-
 
 		.result_part{
 			width:260px;
@@ -283,19 +282,27 @@
 			height:100%;
 		}
 
-		.result_part img:hover{
-			cursor:pointer;
+		.btn a{
+			text-decoration: none;
+			color:white;
+			margin: 0 auto;
 		}
 
+		.button_wrapper{
+			display:flex;
+			justify-content:space-between;
+			align-content: center;
 
+		}
 
 
 
 		
 
-   		
 
-   </style>
+
+
+</style>
 </head>
 <body>
 <header>
@@ -419,30 +426,39 @@
 	<div class="result_container">
 		<div class="result_part_wrapper c1">
 			<div class="result_part animated fadeIn part1">
-				<div class="more_text" style="display:none;">
-					더 보기
-				</div>
 			</div>
 		</div>
 		<div class="result_part_wrapper c2">
 			<div class="result_part animated fadeIn part2">
-				<div class="more_text" style="display:none;">
-					더 보기
-				</div>
 			</div>
 		</div>
 		<div class="result_part_wrapper c3">
 			<div class="result_part animated fadeIn part3">
-				<div class="more_text" style="display:none;">
-					더 보기
-				</div>
 			</div>
 		</div>
-		
-
-
 	</div>
+	<div class="button_wrapper container">
+			<button class="btn btn-danger">
+				<a id="part1" href="#" target="_blank">
+					<span class="glyphicon glyphicon-hand-right"></span>
+					더 보기
+				</a>
+			</button>
+			<button class="btn btn-danger">
+				<a id="part2" href="#" target="_blank">
+					<span class="glyphicon glyphicon-hand-right"></span>
+					더 보기
+				</a>
+			</button>
+			<button class="btn btn-danger">
+				<a id="part3" href="#" target="_blank">
+					<span class="glyphicon glyphicon-hand-right"></span>
+					더 보기
+				</a>
+			</button>
+		</div>
 </div>
+
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -514,6 +530,7 @@
 		cha:2,
 		ending:null,
 		src:"movie_img/ani_voice.png",
+		anchor:"d_ani_voice.html",
 		score:0
 	}
 	var v_ani_zoo={
@@ -521,7 +538,8 @@
 		mood:1,
 		cha:1,
 		ending:1,
-		src:"movie_img/ani_wolf.png",
+		src:"movie_img/ani_zoo.png",
+		anchor:"d_ani_zoo.html",
 		score:0
 	}
 	var v_co_bro={
@@ -530,6 +548,7 @@
 		cha:1,
 		ending:2,
 		src:"movie_img/co_bro.png",
+		anchor:"d_co_bro.html",
 		score:0
 	}
 	var v_co_lucky={
@@ -538,6 +557,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/co_lucky.png",
+		anchor:"d_co_lucky.html",
 		score:0
 	}
 	var v_co_padding={
@@ -546,6 +566,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/co_padding.png",
+		anchor:"d_co_padding.html",
 		score:0
 	}
 	var v_co_she={
@@ -554,6 +575,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/co_she.jpg",
+		anchor:"d_co_she.html",
 		score:0
 	}
 	
@@ -563,6 +585,7 @@
 		cha:2,
 		ending:2,
 		src:"movie_img/dk_fl.png",
+		anchor:"d_dk_fl.html",
 		score:0
 	}
 	var v_dk_gea={
@@ -571,6 +594,7 @@
 		cha:2,
 		ending:1,
 		src:"movie_img/dk_gea.png",
+		anchor:"d_dk_gea.html",
 		score:0
 	}
 	var v_dk_han={
@@ -579,6 +603,7 @@
 		cha:2,
 		ending:2,
 		src:"movie_img/dk_han.png",
+		anchor:"d_dk_han.html",
 		score:0
 	}
 	var v_dk_we={
@@ -587,6 +612,7 @@
 		cha:2,
 		ending:null,
 		src:"movie_img/dk_we.png",
+		anchor:"d_dk_we.html",
 		score:0
 	}
 	var v_rm_about={
@@ -595,6 +621,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/rm_about.png",
+		anchor:"d_rm_about.html",
 		score:0
 	}
 	var v_rm_beaty={
@@ -603,6 +630,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/rm_beaty.png",
+		anchor:"d_rm_beauty.html",
 		score:0
 	}
 	var v_rm_cl={
@@ -611,6 +639,7 @@
 		cha:2,
 		ending:2,
 		src:"movie_img/rm_cl.png",
+		anchor:"d_rm_cl.html",
 		score:0
 	}
 	var v_rm_girl={
@@ -619,6 +648,7 @@
 		cha:2,
 		ending:1,
 		src:"movie_img/rm_girl.png",
+		anchor:"d_rm_girl.html",
 		score:0
 	}
 	var v_sf_aben={
@@ -627,6 +657,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/sf_aben.png",
+		anchor:"d_sf_aben.html",
 		score:0
 	}
 	var v_sf_hung={
@@ -635,6 +666,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/sf_hung.png",
+		anchor:"d_sf_hung.html",
 		score:0
 	}
 	var v_sf_inter={
@@ -643,6 +675,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/sf_inter.png",
+		anchor:"d_sf_inter.html",
 		score:0
 	}
 	var v_sf_sin={
@@ -651,6 +684,7 @@
 		cha:1,
 		ending:2,
 		src:"movie_img/sf_sin.png",
+		anchor:"d_sf_sin.html",
 		score:0
 	}
 
@@ -993,46 +1027,42 @@
 		$(".que4").css("display", "none");
 
 		$("<img>")
-		.attr("src", movies_list[1].src)
+		.attr("src", movies_list[0].src)
 		.css("left", "50%")
 		.css("top", "50%")
 		.attr("title", "1위")
 		.appendTo(".part1");
 
-		$(".part1").click(function(){
-			console.log("clicked")
-			$("<a>")
-			.attr("href", movies_list[1].anchor)
-			.prepend(".part1");
+
+		$("#part1").click(function(){
+			$(this).attr("href", movies_list[0].anchor)
+		});
+
+		$("<img>")
+		.attr("src", movies_list[1].src)
+		.css("left", "50%")
+		.css("top", "50%")
+		.attr("title", "2위")
+		.appendTo(".part2");
+
+		$("#part2").click(function(){
+			$(this).attr("href", movies_list[1].anchor)
 		});
 
 		$("<img>")
 		.attr("src", movies_list[2].src)
 		.css("left", "50%")
 		.css("top", "50%")
-		.attr("title", "2위")
-		.appendTo(".part2");
-
-		$(".part2").click(function(){
-			$("<a>")
-			.attr("href", movies_list[2].anchor)
-			.prepend(".part2");
-		});
-
-		$("<img>")
-		.attr("src", movies_list[3].src)
-		.css("left", "50%")
-		.css("top", "50%")
 		.attr("title", "3위")
 		.appendTo(".part3");
 
-		$(".part2").click(function(){
-			$("<a>")
-			
-			.attr("href", movies_list[3].anchor)
-			.prepend(this);
+		$("#part3").click(function(){
+			$(this).attr("href", movies_list[2].anchor)
 		});
 
+	
+
+		
 
 		$(".result").css("display", "block").addClass('animated fadeIn');;
 
