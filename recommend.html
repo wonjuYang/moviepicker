@@ -251,12 +251,11 @@
 		}
 
 		.result_container{
-			height:500px;
+			height:450px;
 			display:flex;
 			justify-content:center;
 			align-content: center;
 		}
-
 
 		.result_part{
 			width:260px;
@@ -283,23 +282,67 @@
 			height:100%;
 		}
 
-		.result_part img:hover{
-			cursor:pointer;
+		.btn a{
+			text-decoration: none;
+			color:white;
+			margin: 0 auto;
 		}
 
+		.button_wrapper{
+			display:flex;
+			justify-content:space-between;
+			align-content: center;
+		}
 
+		#section4 footer{
+			color:white;
+            width: 100%;
+            height: 60px;
+            background-color:#000 ;
+            font-size: 14px;
+            display:fixed;
+            position:absolute;
+    		bottom:0px;
+    		right:0px;
+        }
 
+        #section4 footer .container{
+            position: relative;
+            top: 35%;
+        }
+        #section4 footer .container .logo{
+            display: inline-block;
+        }
+        
+        #section4 address{
+            font-style: normal;
+            list-style: none;
+            display: inline-block;
+            position: relative;
+            float: right;
+        }
+        #section4 address li{
+            padding-bottom: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+        }
+        #section4 .icons{
+            width: 600px;
+            padding-top: 110px;  
+          	margin:0 auto;
+        }
+        #section4 .icons li{
+            list-style: none;
+            justify-content: space-between;
+        }
+        
 
-
-		
-
-   		
-
-   </style>
+</style>
 </head>
 <body>
 <header>
-		<a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+		<a class="logo" href="index.html"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
 		<div class="menu">
 			<ul>
 				<li><a href="index.html">홈</a></li>
@@ -419,29 +462,49 @@
 	<div class="result_container">
 		<div class="result_part_wrapper c1">
 			<div class="result_part animated fadeIn part1">
-				<div class="more_text" style="display:none;">
-					더 보기
-				</div>
 			</div>
 		</div>
 		<div class="result_part_wrapper c2">
 			<div class="result_part animated fadeIn part2">
-				<div class="more_text" style="display:none;">
-					더 보기
-				</div>
 			</div>
 		</div>
 		<div class="result_part_wrapper c3">
 			<div class="result_part animated fadeIn part3">
-				<div class="more_text" style="display:none;">
-					더 보기
-				</div>
 			</div>
 		</div>
-		
-
-
 	</div>
+	<div class="button_wrapper container">
+			<button class="btn btn-danger">
+				<a id="part1" href="#" target="_blank">
+					<span class="glyphicon glyphicon-hand-right"></span>
+					더 보기
+				</a>
+			</button>
+			<button class="btn btn-danger">
+				<a id="part2" href="#" target="_blank">
+					<span class="glyphicon glyphicon-hand-right"></span>
+					더 보기
+				</a>
+			</button>
+			<button class="btn btn-danger">
+				<a id="part3" href="#" target="_blank">
+					<span class="glyphicon glyphicon-hand-right"></span>
+					더 보기
+				</a>
+			</button>
+		</div>
+
+</div>
+<div id="section4" class="section">
+    <footer>
+        <div class="container">
+            <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
+               <address>
+                   <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 | 대표자: 양원주 | 팀원: 권경아, 손유성, 김미진</li>
+                   <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
+               </address>
+            </div>
+    </footer>
 </div>
 
 <script src="js/jquery-3.3.1.js"></script>
@@ -514,6 +577,7 @@
 		cha:2,
 		ending:null,
 		src:"movie_img/ani_voice.png",
+		anchor:"d_ani_voice.html",
 		score:0
 	}
 	var v_ani_zoo={
@@ -521,7 +585,8 @@
 		mood:1,
 		cha:1,
 		ending:1,
-		src:"movie_img/ani_wolf.png",
+		src:"movie_img/ani_zoo.png",
+		anchor:"d_ani_zoo.html",
 		score:0
 	}
 	var v_co_bro={
@@ -530,6 +595,7 @@
 		cha:1,
 		ending:2,
 		src:"movie_img/co_bro.png",
+		anchor:"d_co_bro.html",
 		score:0
 	}
 	var v_co_lucky={
@@ -538,6 +604,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/co_lucky.png",
+		anchor:"d_co_lucky.html",
 		score:0
 	}
 	var v_co_padding={
@@ -546,6 +613,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/co_padding.png",
+		anchor:"d_co_padding.html",
 		score:0
 	}
 	var v_co_she={
@@ -554,6 +622,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/co_she.jpg",
+		anchor:"d_co_she.html",
 		score:0
 	}
 	
@@ -563,6 +632,7 @@
 		cha:2,
 		ending:2,
 		src:"movie_img/dk_fl.png",
+		anchor:"d_dk_fl.html",
 		score:0
 	}
 	var v_dk_gea={
@@ -571,6 +641,7 @@
 		cha:2,
 		ending:1,
 		src:"movie_img/dk_gea.png",
+		anchor:"d_dk_gea.html",
 		score:0
 	}
 	var v_dk_han={
@@ -579,6 +650,7 @@
 		cha:2,
 		ending:2,
 		src:"movie_img/dk_han.png",
+		anchor:"d_dk_han.html",
 		score:0
 	}
 	var v_dk_we={
@@ -587,6 +659,7 @@
 		cha:2,
 		ending:null,
 		src:"movie_img/dk_we.png",
+		anchor:"d_dk_we.html",
 		score:0
 	}
 	var v_rm_about={
@@ -595,6 +668,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/rm_about.png",
+		anchor:"d_rm_about.html",
 		score:0
 	}
 	var v_rm_beaty={
@@ -603,6 +677,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/rm_beaty.png",
+		anchor:"d_rm_beauty.html",
 		score:0
 	}
 	var v_rm_cl={
@@ -611,6 +686,7 @@
 		cha:2,
 		ending:2,
 		src:"movie_img/rm_cl.png",
+		anchor:"d_rm_cl.html",
 		score:0
 	}
 	var v_rm_girl={
@@ -619,6 +695,7 @@
 		cha:2,
 		ending:1,
 		src:"movie_img/rm_girl.png",
+		anchor:"d_rm_girl.html",
 		score:0
 	}
 	var v_sf_aben={
@@ -627,6 +704,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/sf_aben.png",
+		anchor:"d_sf_aben.html",
 		score:0
 	}
 	var v_sf_hung={
@@ -635,6 +713,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/sf_hung.png",
+		anchor:"d_sf_hung.html",
 		score:0
 	}
 	var v_sf_inter={
@@ -643,6 +722,7 @@
 		cha:1,
 		ending:1,
 		src:"movie_img/sf_inter.png",
+		anchor:"d_sf_inter.html",
 		score:0
 	}
 	var v_sf_sin={
@@ -651,6 +731,7 @@
 		cha:1,
 		ending:2,
 		src:"movie_img/sf_sin.png",
+		anchor:"d_sf_sin.html",
 		score:0
 	}
 
@@ -984,8 +1065,8 @@
 			}
 		}
 
+		$(".section").css("display", "none");
 
-		
 
 		movies_list.sort(function (f, s) { return s.score-f.score; });
 
@@ -993,51 +1074,44 @@
 		$(".que4").css("display", "none");
 
 		$("<img>")
-		.attr("src", movies_list[1].src)
+		.attr("src", movies_list[0].src)
 		.css("left", "50%")
 		.css("top", "50%")
 		.attr("title", "1위")
 		.appendTo(".part1");
 
-		$(".part1").click(function(){
-			console.log("clicked")
-			$("<a>")
-			.attr("href", movies_list[1].anchor)
-			.prepend(".part1");
+
+		$("#part1").click(function(){
+			$(this).attr("href", movies_list[0].anchor)
+		});
+
+		$("<img>")
+		.attr("src", movies_list[1].src)
+		.css("left", "50%")
+		.css("top", "50%")
+		.attr("title", "2위")
+		.appendTo(".part2");
+
+		$("#part2").click(function(){
+			$(this).attr("href", movies_list[1].anchor)
 		});
 
 		$("<img>")
 		.attr("src", movies_list[2].src)
 		.css("left", "50%")
 		.css("top", "50%")
-		.attr("title", "2위")
-		.appendTo(".part2");
-
-		$(".part2").click(function(){
-			$("<a>")
-			.attr("href", movies_list[2].anchor)
-			.prepend(".part2");
-		});
-
-		$("<img>")
-		.attr("src", movies_list[3].src)
-		.css("left", "50%")
-		.css("top", "50%")
 		.attr("title", "3위")
 		.appendTo(".part3");
 
-		$(".part2").click(function(){
-			$("<a>")
-			
-			.attr("href", movies_list[3].anchor)
-			.prepend(this);
+		$("#part3").click(function(){
+			$(this).attr("href", movies_list[2].anchor)
 		});
+
 
 
 		$(".result").css("display", "block").addClass('animated fadeIn');;
 
 		$(".count_wrapper").css("display", "none");
-
 
 
 	});

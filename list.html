@@ -339,6 +339,68 @@
 			opacity: 0.7;
 		}
 
+		#section7{
+            background-color: black;
+        }
+        #section7 .icons{
+            width: 600px;
+            padding-top: 110px;
+            margin:0 auto;
+        }
+        #section7 .icons ul{
+            display: flex;
+            justify-content: space-between;
+            margin:0 auto;
+            display: flex;
+            padding: 0;
+        }
+        #section7 .icons li{
+            list-style: none;
+        }
+        
+        #section7 footer .container{
+            position: relative;
+            top: 35%;
+        }
+        
+        
+        #section7 .icons{
+            width: 600px;
+            padding-top: 110px;
+            cursor: pointer;
+
+        }
+        
+        #section7 .icons img{
+            width: 120px;
+        }
+        
+        #section7 footer{
+            /*position: absolute;*/
+            width: 100%;
+            height: 160px;
+            background-color: #ffff ;
+            font-size: 14px;
+            bottom: 0px;
+        }
+        
+        #section7 footer .container .logo{
+            display: inline-block;
+        }
+        #section7 address{
+            font-style: normal;
+            list-style: none;
+            display: inline-block;
+            position: relative;
+            float: right;
+        }
+        #section7 address li{
+            padding-bottom: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            color: black;
+        }
+
 
 
 
@@ -348,12 +410,12 @@
 <body> 
 <div>
 	<header>
-		<a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+		<a class="logo" href="index.html"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
 		<div class="menu">
 			<ul>
-				<li><a href="">홈</a></li>
-				<li><a href="">테스트</a></li>
-				<li><a href="">장르</a></li>
+				<li><a href="index.html">홈</a></li>
+				<li><a href="recommend.html">테스트</a></li>
+				<li><a href="#">장르</a></li>
 			</ul>
 		</div>
 	</header>
@@ -385,12 +447,12 @@
 		
 			<div class="container">				
 				<div class="row">
-			 		<h3 style="color:white">&nbsp;&nbsp;액션 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
+			 		<h3 style="color:white">&nbsp;&nbsp;액션 영화 &nbsp;<a style="font-size:15px" href="d_act_man.html">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
 			 			<figure class="movie one">
 				 			<img src="movie_img/act_man.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_act_man.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.9</span></span>	 				
 				 				<h3>아저씨 
@@ -407,7 +469,7 @@
 			 			<figure class="movie two">
 				 			<img src="movie_img/act_am.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_act_am.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.9</span></span>	 				
 				 				<h3>암살</h3>
@@ -427,7 +489,7 @@
 			 			<figure class="movie three">
 				 			<img src="movie_img/act_ninja.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_act_ninja.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">7.89</span></span>
 				 				<h3>닌자 어쌔신</h3>
@@ -444,7 +506,7 @@
 			 			<figure class="movie four">
 				 			<img src="movie_img/act_taken.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_act_taken.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">8.09</span></span>
 				 				<h3>테이큰</h3>
@@ -463,12 +525,12 @@
 		<div id="section2" class="section">
 			<div class="container">
 				<div class="row">
-			 		<h3 style="color:white">&nbsp;&nbsp;로맨스 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
+			 		<h3 style="color:white">&nbsp;&nbsp;로맨스 영화 &nbsp;<a style="font-size:15px" href="d_rm_about.html">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
 			 			<figure class="movie one">
 				 			<img src="movie_img/rm_about.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_rm_about.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.2</span></span>	 				
 				 				<h3>어바웃 타임 
@@ -488,7 +550,7 @@
 			 			<figure class="movie two">
 				 			<img src="movie_img/rm_beaty.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_rm_beauty.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">8.25</span></span>	 				
 				 				<h3>뷰티인사이드
@@ -508,7 +570,7 @@
 			 			<figure class="movie three">
 				 			<img src="movie_img/rm_cl.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_rm_cl.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.3</span></span>	 				
 				 				<h3>클래식 
@@ -524,7 +586,7 @@
 			 			<figure class="movie four">
 				 			<img src="movie_img/rm_girl.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_rm_girl.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.5</span></span>	 				
 				 				<h3>나의 소녀시대
@@ -546,12 +608,12 @@
 		<div id="section3" class="section">
 			<div class="container">
 				<div class="row">
-			 		<h3 style="color:white">&nbsp;&nbsp;SF/판타지 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
+			 		<h3 style="color:white">&nbsp;&nbsp;SF/판타지 영화 &nbsp;<a style="font-size:15px" href="d_sf_aben.html">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
 			 			<figure class="movie one">
 				 			<img src="movie_img/sf_aben.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_sf_aben.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>어벤져스 <br/>
@@ -570,7 +632,7 @@
 			 			<figure class="movie two">
 				 			<img src="movie_img/sf_hung.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_sf_hung.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">8.5</span></span>	 				
 				 				<h3>헝거게임 <br/>
@@ -587,7 +649,7 @@
 			 			<figure class="movie three">
 				 			<img src="movie_img/sf_inter.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_sf_inter.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>인터스텔라 
@@ -607,7 +669,7 @@
 			 			<figure class="movie four">
 				 			<img src="movie_img/sf_sin.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_sf_sin.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>신과 함께 <br/>
@@ -629,12 +691,12 @@
 		<div id="section4" class="section">
 			<div class="container">
 				<div class="row">
-			  		<h3 style="color:white">&nbsp;&nbsp;가족/코미디 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
+			  		<h3 style="color:white">&nbsp;&nbsp;가족/코미디 영화 &nbsp;<a style="font-size:15px" href="d_co_bro.html">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
 			 			<figure class="movie one">
 				 			<img src="movie_img/co_bro.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_co_bro.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>형
@@ -652,7 +714,7 @@
 			 			<figure class="movie two">
 				 			<img src="movie_img/co_lucky.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_co_lucky.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>럭키
@@ -672,7 +734,7 @@
 			 			<figure class="movie three">
 				 			<img src="movie_img/co_padding.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_co_padding.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>패딩턴
@@ -693,7 +755,7 @@
 			 			<figure class="movie four">
 				 			<img src="movie_img/co_she.jpg" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_co_she.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>수상한 그녀
@@ -711,12 +773,12 @@
 		<div id="section5" class="section">
 			<div class="container">
 				<div class="row">
-			 		<h3 style="color:white">&nbsp;&nbsp;독립 영화 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
+			 		<h3 style="color:white">&nbsp;&nbsp;독립 영화 &nbsp;<a style="font-size:15px" href="d_dk_gea.html">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
 			 			<figure class="movie one">
 				 			<img src="movie_img/dk_gea.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_dk_gea.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>귀향
@@ -731,7 +793,7 @@
 			 			<figure class="movie two">
 				 			<img src="movie_img/dk_fl.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_dk_fl.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>플로리다 프로젝트
@@ -750,7 +812,7 @@
 			 			<figure class="movie three">
 				 			<img src="movie_img/dk_we.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_dk_we.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>우리의 20세기
@@ -769,7 +831,7 @@
 			 			<figure class="movie four">
 				 			<img src="movie_img/dk_han.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_dk_han.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>한공주
@@ -789,12 +851,12 @@
 		<div id="section6" class="section">
 			<div class="container">
 				<div class="row">
-			 		<h3 style="color:white">&nbsp;&nbsp;애니메이션 &nbsp;<a style="font-size:15px" href="#">더보기</a></h3>
+			 		<h3 style="color:white">&nbsp;&nbsp;애니메이션 &nbsp;<a style="font-size:15px" href="d_ani_voice.html">더보기</a></h3>
 			 		<div class="col-sm-3 col-xs-6">
 			 			<figure class="movie one">
 				 			<img src="movie_img/ani_voice.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_ani_voice.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>목소리의 형태
@@ -816,7 +878,7 @@
 			 			<figure class="movie two">
 				 			<img src="movie_img/ani_name.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_ani_name.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>너의 이름은
@@ -840,7 +902,7 @@
 			 			<figure class="movie three">
 				 			<img src="movie_img/ani_time.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_ani_time.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>시간을 달리는 소녀
@@ -856,7 +918,7 @@
 			 			<figure class="movie four">
 				 			<img src="movie_img/ani_zoo.png" class="img-responsive movie_img"/>
 				 			<figcaption>
-				 				<a href="#"></a>
+				 				<a href="d_ani_zoo.html"></a>
 				 				<span style="color:yellow;" class="glyphicon glyphicon-star" aria-hidden="true">
 				 				<span style="font-size:15px; color:white">9.1</span></span>	 				
 				 				<h3>주토피아
@@ -879,6 +941,17 @@
 			 	</div>
 			</div>
 		</div>
+		<div id="section7" class="section7">
+            <footer>
+                <div class="container">
+                    <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
+                    <address>
+                    <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 &nbsp;|&nbsp; 대표자: 양원주 &nbsp;|&nbsp; 팀원: 권경아, 손유성, 김미진</li>
+                    <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
+                    </address>
+                </div>
+            </footer>
+        </div>
 
 
 	</div>
