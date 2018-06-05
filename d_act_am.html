@@ -65,7 +65,7 @@
 			height: 1130px;
 			
 			/*margin-top: 100px;*/
-			margin-bottom: 100px;
+			margin-bottom: 0px;
 			margin-rigth: 0 auto;
 			margin-left: 0 auto;
 			color: #fff;
@@ -211,6 +211,7 @@
 			overflow: auto;
 		}
 		.movieListRight{
+			
 			margin: 0px 40px 20px 10px;
 			float: left;
 		}
@@ -225,6 +226,16 @@
 		}
 		.movieListRight div{
 			padding-top: 10px;
+		}
+		.movieListImgDiv{
+			position: relative;
+			width: 150px;
+			height: 217px;
+			overflow: hidden;
+		}
+		.movieListImg{
+			position: absolute;
+		
 		}
 		.movieListLeft{
 			margin: 0px 10px 20px 40px;
@@ -241,6 +252,16 @@
 		}
 		.movieListLeft div{
 			padding-top: 10px;
+		}
+		.backdrop{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 150px;
+			height: 217px;
+			background-color: #000;
+			opacity: 0.0;	
+		
 		}
 		#details{
 			margin: 20px;
@@ -384,8 +405,6 @@
             font-weight: 600;
             color:white;
         }
-
-
 
 	</style>
 	
@@ -728,6 +747,24 @@
 		$(this).css('background-color', '#d9534f');
 		$(this).css('color', '#fff');
 	});
+
+	$(".backdrop").hover(function(){
+			$(".movieListImg").animate({transform: "rotate(-90deg)", 
+				width: "160px", 
+				height: "237px", 
+				top: "-10px", 
+				left: "-5px"},400);
+			$('.backdrop').animate({ opacity: "0.2" }, 500);
+
+
+		},function(){
+			$(".movieListImg").animate({transform: "rotate(-90deg)", 
+				width: "150px", 
+				height: "217px", 
+				top: "0px", 
+				left: "0px"},400);;
+			$(".backdrop").css('opacity','0.0');
+		})
 </script>
 </body>
 </html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>MovieDetails</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+		body{
+			background-color: black;
+		}
+		header{
+			width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding:30px 40px;
+            background-color: transparent;
+        	z-index: 100;
+        }
+        .glyphicon-eye-open{
+         	color: white;
+         	margin: 6px 6px 0px 0px;
+         	font-size: 30px;
+        }
+        .logo img{
+			width: 200px;
+			position: absolute;
+        }
+        .menu{
+            background-color: transparent;
+            bottom:auto;
+            left:auto;
+            opacity:1;
+            pointer-events: all;
+            right:auto;
+        }
+        .menu ul{
+            list-style-type:none;
+            left:auto;
+            max-width: none;
+            display: flex;
+            top:auto;
+            transform: none;
+            width:auto;
+            margin: 10px 35px 0px 0px;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left:30px;
+            font-size: 18px;
+            font-weight:bold;
+        }
+	    .menu a{
+            text-decoration:none;
+            color:white;
+        }
+        .menu a:hover{
+            text-decoration:none;
+            color:#d9534f;
+        }
+		.container{
+			background-color: black;
+			width: 1240px;
+			height: 1130px;
+			
+			/*margin-top: 100px;*/
+			margin-bottom: 0px;
+			margin-rigth: 0 auto;
+			margin-left: 0 auto;
+			color: #fff;
+		}
+		.wrapper_right{
+			width: 786px;
+			height: 1000px;
+			float: left;
+		}
+		.wrapper_left{
+			width: 422px;
+			height: 1000px;
+			float: left;
+		}
+		.photo_wrap{
+			width: 666px;
+			height: 568px;
+			margin: 20px 60px 15px 60px;
+		}
+		.videoDiv{
+			width: 665px;
+			height: 443px;
+		}
+		.adVideo{
+			width: 665px;
+			heigth: 443px;
+		}
+		.details_wrap{
+			width: 667px;
+			height: 332px;
+			border: 1px #C0BDBD solid;
+			margin: 60px 60px 0px 60px;
+			font-family: NanumGothic;
+		}
+		.watchInfoHeader{
+			width: 666px;
+			height: 60px;	
+		}
+		.infoHeaderInner{
+			width: 626px;
+			height: 40px;
+			margin: 0px 20px 20px 0px;
+		}
+		.movieTitle{
+			width: 500px;
+			height: 40px;
+			font-weight: bold;
+			font-size: 30px;
+			font-style: Sans-serif;
+			display: inline;
+		}
+		.movieRating{
+			font-weight: bold;
+			font-size: 20px;
+			font-style: Sans-serif;
+		}
+		.star{
+			float: right;
+			padding-top:10px;
+		}
+		.glyphicon-star{
+			color: #CB2E2E;
+		}
+		.glyphicon-star-empty{
+			color: #CB2E2E;
+		}
+		.watchInfo{
+			width: 666px;
+			height: 322px;
+			font-family: NanumGothic;
+		}
+		.nav-tabs{
+			margin: 0px;
+		}
+		.detailTaps {
+			font-size: 16px;
+			font-weight: bold;
+			font-family: NanumGothic;
+			text-align: center;
+			border: 1px #fff solid;
+			color: #fff;
+
+		}
+		#firstTap{
+			background-color: #d9534f;
+			color: #fff;
+		}
+		.tab-content{
+			width: 666px;
+			height: 278px;
+		}
+		.col-xs-4{
+			padding: 0px;
+		}
+		#summary{
+			font-size: 16px;
+			margin: 20px;
+		}
+		.summaryHeader{
+			font-weight: bold;
+			margin-top: 10px;
+			margin-bottom: 10px; 
+		}
+		.summaryContent{
+			color:#7d7d7d;
+		}
+		.tab-pane{
+			margin: 10px 10px;
+		}
+		#actor{
+			font-weight: bold;
+			font-size: 16px;
+			margin: 20px;
+		}
+		.director{
+			padding-bottom: 10px;
+		}
+		.mainActor{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.actorTitles{
+			padding-right: 10px;
+			font-weight: bold;
+		}
+		.actorDetails{
+			color:#7d7d7d;
+		}
+		.subActor{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.movieListTitleDiv{
+			margin: 20px;
+		}
+		.movieListTitle{
+			font-size: 20px;
+			font-weight: bold;
+			font-family: NanumGothic;
+		}
+		.movieListDiv{
+			height: 930px;
+			overflow: auto;
+		}
+		.movieListRight{
+			
+			margin: 0px 40px 20px 10px;
+			float: left;
+		}
+		.movieListRight a{
+			font-size: 14px;
+			font-family: NanumGothic;
+			font-weight: bold;
+			color: #fff;
+		}
+		.movieListRight a:hover{
+			text-decoration: none;
+		}
+		.movieListRight div{
+			padding-top: 10px;
+		}
+		.movieListImgDiv{
+			position: relative;
+			width: 150px;
+			height: 217px;
+			overflow: hidden;
+		}
+		.movieListImg{
+			position: absolute;
+		
+		}
+		.movieListLeft{
+			margin: 0px 10px 20px 40px;
+			float: left;
+		}
+		.movieListLeft a{
+			font-size: 14px;
+			font-family: NanumGothic;
+			font-weight: bold;
+			color: #fff;
+		}
+		.movieListLeft a:hover{
+			text-decoration: none;	
+		}
+		.movieListLeft div{
+			padding-top: 10px;
+		}
+		.backdrop{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 150px;
+			height: 217px;
+			background-color: #000;
+			opacity: 0.0;	
+		
+		}
+		#details{
+			margin: 20px;
+		}
+		.detailsInfoDiv{
+			padding-bottom: 10px;
+		}
+		.detailsInfo{
+			float: left;
+		}
+		#infoP1{
+			padding-right: 10px;
+			font-weight: bold;
+		}
+		#infoP2{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right: 1px solid #E1DBDB;
+		}
+		#infoP3{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right: 1px solid #E1DBDB;
+		}
+		#infoP4{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right: 1px solid #E1DBDB;
+		}
+		#infoP5{
+			padding-right: 10px;
+			padding-left: 10px;
+			font-weight: bold;
+		}
+		#infoP6{
+			color: #666262;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.detailsAgeRestrictionDiv{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.detailsAgeRestriction{
+			float: left;
+		}
+		#ageRestrictionP1{
+			padding-right: 20px;
+			font-weight: bold;
+		}
+		#ageRestrictionP2{
+			color: #666262;
+			padding-left: 10px;
+		}
+		.detailsTrailerDiv{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.detailsTrailer{
+			float: left;
+		}
+		#trailerP1{
+			padding-right: 20px;
+			font-weight: bold;
+		}
+		#trailerP2{
+			padding-left: 10px;
+		}
+		.active{
+		}
+
+	</style>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+
+	<!-- fotorama.css & fotorama.js. -->
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+</head>
+<body>
+	<div>
+	<header>
+		<a class="logo" href="index.html"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+		<div class="menu">
+			<ul>
+				<li><a href="index.html">홈</a></li>
+				<li><a href="recommend.html">테스트</a></li>
+				<li><a href="list.html">장르</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="container">
+		<div class="wrapper_right">
+			<!--스틸컷 div-->
+			<div class="photo_wrap">
+				<div class="infoHeaderInner">
+						<div class="movieTitle">암살</div>
+						<span class="star">
+							<span  class="movieRating">평점 </span>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star"></i>
+							<i class="glyphicon glyphicon-star-empty"> </i>
+							<span class="movieRating">9.10</span>
+						</span>
+					</div>
+				<!--스틸컷 fotorama-->
+				<div class="fotorama" data-autoplay="true" data-nav="thumbs" data-allowfullscreen="true">
+					
+					<a href="https://youtu.be/LllIFYytkfs">
+    					<img src="movie_img/stealcut/암살8.jpg">
+  					</a>
+					<img src="movie_img/stealcut/암살1.jpg"/>
+					<img src="movie_img/stealcut/암살2.jpg"/>
+					<img src="movie_img/stealcut/암살3.jpg"/>
+					<img src="movie_img/stealcut/암살4.jpg"/>
+					<img src="movie_img/stealcut/암살5.jpg"/>
+					<img src="movie_img/stealcut/암살6.jpg"/>
+					<img src="movie_img/stealcut/암살7.jpg"/>
+				</div>
+			</div>
+			<!--영화 정보 div-->
+			<div class="details_wrap">
+				
+				<!--영화 세부사항 div-->
+				<div class="watchInfo">
+					<ul class="nav nav-tabs row">
+						<li class="active col-xs-4"><a class="detailTaps" id="firstTap" data-toggle="tab" href="#details">세부사항</a></li>
+						<li class="col-xs-4"><a class="detailTaps" data-toggle="tab" href="#summary">줄거리</a></li>
+						<li class="col-xs-4"><a class="detailTaps " data-toggle="tab" href="#actor">배우/감독</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active fade in" id="details">
+							<div class="detailsInfoDiv">
+								<p class="detailsInfo" id="infoP1">개요</p>
+								<p class="detailsInfo" id="infoP2">액션, 드라마</p>
+								<p class="detailsInfo" id="infoP3">139분</p>
+								<p class="detailsInfo" id="infoP4">한국</p>
+								<p class="detailsInfo" id="infoP5">개봉일</p>
+								<p id="infoP6">2015년 7월 22일</p>
+							</div>
+							<div class="detailsAgeRestrictionDiv">
+								<p class="detailsAgeRestriction" id="ageRestrictionP1">등급</p>
+								<p id="ageRestrictionP2">15세 관람가</p>
+							</div>
+							<div class="detailsTrailerDiv">
+								<p class="detailsTrailer" id="trailerP1">메인 예고편</p>
+								<a href="https://youtu.be/LllIFYytkfs" id="trailerP2">https://youtu.be/LllIFYytkfs</a>
+							</div>
+						</div>
+						<div class="tab-pane fade in" id="summary">
+							<h4 class="summaryHeader">1933년 조국이 사라진 시대</h4>
+							<br>
+							<p class="summaryContent">
+									 대한민국 임시정부는 일본 측에 노출되지 않은 세 명을 암살작전에 지목한다.
+									 한국 독립군 저격수 안옥윤, 신흥무관학교 출신 속사포, 폭탄 전문가 황덕삼!
+			 						김구의 두터운 신임을 받는 임시정부 경무국 대장 염석진은 이들을 찾아 나서기 시작한다.
+			 						암살단의 타깃은 조선주둔군 사령관 카와구치 마모루와 친일파 강인국.
+			 						한편, 누군가에게 거액의 의뢰를 받은 청부살인업자 하와이 피스톨이 암살단의 뒤를 쫓는데...
+							</p>
+						</div>
+						<div class="tab-pane fade" id="actor">
+							<div class="director">
+								<h5>
+									<span class="actorTitles" id="directorTitle">감독</span>
+									<span class="actorDetails">이정범</span>
+								</h5>
+							</div>
+							<div class="mainActor">
+								<h5>
+									<span class="actorTitles" id="mainActorTitle">주연</span>
+									<span class="actorDetails">전지현, 이정재</span>
+								</h5>
+							</div>
+							<div class="subActor">
+								<h5>
+									<span class="actorTitles">조연</span>
+									<span class="actorDetails">하정우, 오달수, 조진웅, 이경영, 최덕문, 박병은</span>
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper_left">
+			<div class="movieListTitleDiv">
+				<div class="movieListTitle">
+					최신 인기영화
+				</div>
+			</div>
+			<div class="movieListDiv">
+				<div class="movieListLeft">
+					<a href="d_act_am.html">
+						<div class="movieListImgDiv">
+						<img src="movie_img/resizedImg/act_am.jpg" alt="">
+						<div class="backdrop"></div>
+						</div>
+						<div>
+							<span>암살</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_act_man.html">
+						<div class="movieListImgDiv">
+							<img class="movieListImg" src="movie_img/resizedImg/act_man.jpg" alt="">
+							<div class="backdrop"></div>
+						</div>
+						<div>
+							<span>아저씨</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_act_ninja.html">
+						<img src="movie_img/resizedImg/act_ninja.png" alt="">
+						<div>
+							<span>닌자 어쌔신</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_act_taken.html">
+						<img src="movie_img/resizedImg/act_taken.png" alt="">
+						<div>
+							<span>테이큰</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_ani_name.html">
+						<img src="movie_img/resizedImg/ani_name.png" alt="">
+						<div>
+							<span>너의 이름은</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_ani_time.html">
+						<img src="movie_img/resizedImg/ani_time.png" alt="">
+						<div>
+							<span>시간을 달리는 소녀</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_ani_voice.html">
+						<img src="movie_img/resizedImg/ani_voice.png" alt="">
+						<div>
+							<span>목소리의 형태</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_ani_zoo.html">
+						<img src="movie_img/resizedImg/ani_zoo.png" alt="">
+						<div>
+							<span>주토피아</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_co_bro.html">
+						<img src="movie_img/resizedImg/co_bro.png" alt="">
+						<div>
+							<span>형</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_co_lucky.html">
+						<img src="movie_img/resizedImg/co_lucky.png" alt="">
+						<div>
+							<span>럭키</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_co_padding.html">
+						<img src="movie_img/resizedImg/co_padding.png" alt="">
+						<div>
+							<span>패딩턴</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_co_she.html">
+						<img src="movie_img/resizedImg/co_she.jpg" alt="">
+						<div>
+							<span>수상한 그녀</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_dk_fl.html">
+						<img src="movie_img/resizedImg/dk_fl.png" alt="">
+						<div>
+							<span>플로리다 프로젝트</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_dk_gea.html">
+						<img src="movie_img/resizedImg/dk_gea.png" alt="">
+						<div>
+							<span>귀향</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_dk_han.html">
+						<img src="movie_img/resizedImg/dk_han.png" alt="">
+						<div>
+							<span>한공주</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_dk_we.html">
+						<img src="movie_img/resizedImg/dk_we.png" alt="">
+						<div>
+							<span>우리의 20세기</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_rm_about.html">
+						<img src="movie_img/resizedImg/rm_about.png" alt="">
+						<div>
+							<span>어바웃 타임</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_rm_beauty.html">
+						<img src="movie_img/resizedImg/rm_beaty.png" alt="">
+						<div>
+							<span>뷰티인사이드</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_rm_cl.html">
+						<img src="movie_img/resizedImg/rm_cl.png" alt="">
+						<div>
+							<span>클래식</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_rm_girl.html">
+						<img src="movie_img/resizedImg/rm_girl.png" alt="">
+						<div>
+							<span>너의 소녀시대</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_sf_aben.html">
+						<img src="movie_img/resizedImg/sf_aben.png" alt="">
+						<div>
+							<span>어벤져스</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_sf_hung.html">
+						<img src="movie_img/resizedImg/sf_hung.png" alt="">
+						<div>
+							<span>헝거게임</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListLeft">
+					<a href="d_sf_inter.html">
+						<img src="movie_img/resizedImg/sf_inter.png" alt="">
+						<div>
+							<span>인터스텔라</span>
+						</div>
+					</a>
+				</div>
+				<div class="movieListRight">
+					<a href="d_sf_sin.html">
+						<img src="movie_img/resizedImg/sf_sin.png" alt="">
+						<div>
+							<span>신과함께</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>
+	
+<script>
+	$(".detailTaps").on('click', function(){
+		$(".detailTaps").css('background-color', '#000');
+		$(".detailTaps").css('color', '#dfff');
+		$(this).css('background-color', '#d9534f');
+		$(this).css('color', '#fff');
+	});
+
+	$(".backdrop").hover(function(){
+			$(".movieListImg").animate({transform: "rotate(-90deg)", 
+				width: "160px", 
+				height: "237px", 
+				top: "-10px", 
+				left: "-5px"},400);
+			$('.backdrop').animate({ opacity: "0.2" }, 500);
+
+
+		},function(){
+			$(".movieListImg").animate({transform: "rotate(-90deg)", 
+				width: "150px", 
+				height: "217px", 
+				top: "0px", 
+				left: "0px"},400);;
+			$(".backdrop").css('opacity','0.0');
+		})
+</script>
+</body>
+</html>

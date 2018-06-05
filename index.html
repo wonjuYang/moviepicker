@@ -24,20 +24,9 @@
             margin: 6px 6px 0px 0px;
             font-size: 30px;
         }
-        /*header .logo img{
-            width: 200px;
-            position: absolute;
-            position: fixed;
-            z-index: 100;
-        }*/
-        header .glyphicon-eye-open{
-            color: white;
-            margin: 6px 6px 0px 0px;
-            font-size: 30px;
-        }
         header .logo img{
-            width: 200px;
-            position: absolute;
+			width: 200px;
+			position: absolute;
         }
         .menu{
             bottom:auto;
@@ -109,9 +98,6 @@
             -webkit-transition:1s opacity;
             transition:1s opacity;
         }
-        #section1{
-            
-        }
         #section2{
             background-color: black;
         }
@@ -143,13 +129,8 @@
             /*background-color: green;*/
         }
         #section3 .box_wrapper{
-            width: 100%;
-            height: 100%;
-            /*background-color: green;*/
-        }
-        #section3 .box_wrapper{
-            width: 100%;
-            height: 100%;
+        	width: 100%;
+        	height: 100%;
         }
         #firstrow{
             width: 100%;
@@ -210,7 +191,7 @@
         #section4{
             background-color: black;
         }
-        #section4 .icons{
+        /*#section4 .icons{
             width: 600px;
             padding-top: 110px;
             margin:0 auto;
@@ -243,23 +224,24 @@
             display: inline-block;
             position: relative;
             float: right;
-        }
-        #section4 address li{
+        }*/
+        /*#section4 address li{
             padding-bottom: 5px;
             font-size: 15px;
             font-weight: 600;
             color: black;
-        }
+        }*/
         #section4 .icons{
             width: 600px;
             padding-top: 110px;
             cursor: pointer;
-
+            margin:0 auto;
         }
         #section4 .icons ul{
-            margin:0 auto;
-            display: flex;
+            
             padding: 0;
+            display: flex;
+            justify-content: space-between;
         }
         #section4 .icons li{
 
@@ -379,7 +361,7 @@
             </div>
 
         </div>
-        <div id="section4" class="section">
+		<div id="section4" class="section">
             <div class="contents" style="top:15%;">
                 <h1>Contact us</h1>
                 <div class="icons">
@@ -391,31 +373,38 @@
                 </div>
             </div>
             <footer>
-                <div class="container">
+				<div class="container">
                     <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
-                    <address>
-                    <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 &nbsp;|&nbsp; 대표자: 양원주 &nbsp;|&nbsp; 팀원: 권경아, 손유성, 김미진</li>
-                    <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
-                    </address>
-                </div>
-            </footer>
-        </div>
-
-
+					<address>
+					<li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 &nbsp;|&nbsp; 대표자: 양원주 &nbsp;|&nbsp; 팀원: 권경아, 손유성, 김미진</li>
+				    <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
+					</address>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<!-- <div id="right_nav">
+		<ul>
+			<li><a href=""></a></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div> -->
 
 </div>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script> 
 <script>
 
-    $(window).on("scroll", function(){
-        var scrollTop=$(window).scrollTop();
-        if(scrollTop>100){
-            $('header').css("background-color","transparent");
-        }
-        if(scrollTop<=100){
-            $('header').css("background-color","black");
-        }
+	$(window).on("scroll", function(){
+		var scrollTop=$(window).scrollTop();
+		if(scrollTop>100){
+			$('header').css("background-color","transparent");
+		}
+		if(scrollTop<=100){
+			$('header').css("background-color","black");
+		}
     });
 
 
