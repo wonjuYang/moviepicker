@@ -24,20 +24,20 @@
             margin: 6px 6px 0px 0px;
             font-size: 30px;
         }
+        /*header .logo img{
+            width: 200px;
+            position: absolute;
+            position: fixed;
+            z-index: 100;
+        }*/
+        header .glyphicon-eye-open{
+            color: white;
+            margin: 6px 6px 0px 0px;
+            font-size: 30px;
+        }
         header .logo img{
             width: 200px;
             position: absolute;
-        	position: fixed;
-        	z-index: 100;
-        }
-        header .glyphicon-eye-open{
-         	color: white;
-         	margin: 6px 6px 0px 0px;
-         	font-size: 30px;
-        }
-        header .logo img{
-			width: 200px;
-			position: absolute;
         }
         .menu{
             bottom:auto;
@@ -128,8 +128,8 @@
         #section2 #icons .icon_box .glyphicon{
             color: #d9534f;
             font-size:45px;
-        	color: #d9534f;
-        	font-size:45px;
+            color: #d9534f;
+            font-size:45px;
         }
         #section2 #icons .icon_box p{
             padding-top: 30px;
@@ -140,75 +140,72 @@
             margin-top: 40px;
         }
         #section3{
-
             /*background-color: green;*/
         }
         #section3 .box_wrapper{
             width: 100%;
             height: 100%;
-
-			/*background-color: green;*/
+            /*background-color: green;*/
         }
         #section3 .box_wrapper{
-        	width: 100%;
-        	height: 100%;
-
-
+            width: 100%;
+            height: 100%;
         }
         #firstrow{
-        	width: 100%;
+            width: 100%;
             height: 50%;
             background-color: #d9534f;
             display: flex;
             color: white;
-
-
-
         }
         #secondrow{
-        	width: 100%;
+            width: 100%;
             height: 50%;
-            /*background-color: pink;*/
             display: flex;
             color: #d9534f;
         }
         #section3 .box{
-
             width: 25%;
             text-align: center;
             overflow: hidden;
             /*background-color: #d9534f;*/
-
-			width: 25%;
-			text-align: center;
-			overflow: hidden;
-			/*background-color: #d9534f;*/
-
+        }
+        #section3 .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+        }
+        #section3 .text1 h2{
+            color: white;
+        }
+        #section3 .text1 h2:hover{
+            text-decoration: none;
+        }
+        .animation{
+            transition: all 0.3s linear;
         }
         #section3 .box h2{
-            display: flex;
-            align-content: center;
+            font-weight: 600;
         }
-
-
-        .poster1{
-            background-image:url("movie_img/rm_beaty.PNG");
-            background-attachment: fixed;
-  
+        #section3 .poster{
+            /*background-attachment: fixed;*/
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
-
-       
+        #section3 .poster1{
+            background-image: url("movie_img/rm_beaty.PNG");
+        }
         #section3 .poster2{
             background-image: url("movie_img/dk_fl.PNG");
         }
         #section3 .poster3{
-            background-image: url("img/act_am.jpg");
+            background-image: url("img/am.jpg");
         }
         #section3 .poster4{
-            background-image: url("img/sf_aben.PNG");
-        }
-       
-
+            background-image: url("img/aven.jpg");
         }
         #section4{
             background-color: black;
@@ -216,14 +213,14 @@
         #section4 .icons{
             width: 600px;
             padding-top: 110px;
-            display: flex;
-            
             margin:0 auto;
-            
+        }
+        #section4 .icons ul{
+            display: flex;
+            justify-content: space-between;
         }
         #section4 .icons li{
             list-style: none;
-            justify-content: space-between;
         }
         #section4 footer{
             position: absolute;
@@ -256,43 +253,55 @@
         #section4 .icons{
             width: 600px;
             padding-top: 110px;
-            display: flex;
-            
+            cursor: pointer;
+
+        }
+        #section4 .icons ul{
             margin:0 auto;
-            
+            display: flex;
+            padding: 0;
         }
         #section4 .icons li{
+
             list-style: none;
-            justify-content: space-between;
         }
+        #section4 .icons img{
+            width: 120px;
+        }
+        
         #section4 footer{
             position: absolute;
-			width: 100%;
+            width: 100%;
             height: 160px;
-			background-color: #ffff ;
-			font-size: 14px;
+            background-color: #ffff ;
+            font-size: 14px;
             bottom: 0%;
-		}
+        }
         #section4 footer .container{
             position: relative;
             top: 35%;
         }
-		#section4 footer .container .logo{
+        #section4 footer .container .logo{
             display: inline-block;
-		}
-		#section4 address{
-			font-style: normal;
+        }
+        #section4 address{
+            font-style: normal;
             list-style: none;
             display: inline-block;
             position: relative;
             float: right;
-		}
+        }
         #section4 address li{
             padding-bottom: 5px;
             font-size: 15px;
             font-weight: 600;
             color: black;
         }
+        .btn a{
+            text-decoration: none;
+            color:white;
+        }
+
         /*#right_nav{
             position: fixed;
             left: 17.5%;
@@ -310,12 +319,12 @@
 <body>
 <div>
     <header>
-        <a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+        <a class="logo" href="index.html"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
         <div class="menu">
             <ul>
-                <li><a href="">홈</a></li>
-                <li><a href="">테스트</a></li>
-                <li><a href="">장르</a></li>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="recommend.html">테스트</a></li>
+                <li><a href="list.html">장르</a></li>
             </ul>
         </div>
     </header>
@@ -349,83 +358,51 @@
                     </div>
                 </div>
                 <div class="btn">
-                    <button class="btn btn-danger btn-lg">테스트하러 가기&nbsp;<span class="glyphicon glyphicon-triangle-right" style="top:3px;"></span></button>
+                    <button class="btn btn-danger btn-lg"><a href="recommend.html">테스트하러 가기</a>&nbsp;<span class="glyphicon glyphicon-triangle-right" style="top:3px;"></span></button>
                 </div> 
             </div>
         </div>
         <div id="section3" class="section">
             <div class="box_wrapper">
                 <div id="firstrow">
-                    <div class="box"><h2>액션</h2></div>
+                    <div class="box text text1"><a href="list.html"><h2 id="action" class="animation">액션</h2></a></div>
                     <div class="box poster poster1"><!-- <img src="movie_img/rm_beaty.PNG" alt="로맨스포스터"> --></div>
-                    <div class="box"><h2>SF / 판타지</h2></div>
+                    <div class="box text text2"><h2 id="sf" class="animation">SF / 판타지</h2></div>
                     <div class="box poster poster2"><!-- <img src="movie_img/dk_fl.PNG" alt="독립포스터"> --></div>
                 </div>
                 <div id="secondrow">
                     <div class="box poster poster3"><!-- <img src="img/act_am.jpg" alt="액션포스터"> --></div>
-                    <div class="box"><h2>로맨스</h2></div>
+                    <div class="box text text3"><h2 id="roman" class="animation">로맨스</h2></div>
                     <div class="box poster poster4"><!-- <img src="img/sf_aben.PNG" alt="SF/판타지포스터"> --></div>
-                    <div class="box"><h2>독립</h2></div>
+                    <div class="box text text4"><h2 id="indi" class="animation">독립</h2></div>
                 </div>
             </div>
 
         </div>
         <div id="section4" class="section">
-
-		</div>
-		<div id="section4" class="section">
-
-            <div class="contents" style="top:20%;">
+            <div class="contents" style="top:15%;">
                 <h1>Contact us</h1>
                 <div class="icons">
                     <ul>
-                        <li><span class="glyphicon glyphicon-edit"></span></li>
-                        <li><span class="glyphicon glyphicon-edit"></span></li>
-                        <li><span class="glyphicon glyphicon-edit"></span></li>
+                        <li><img class=img1 src="img/facebook_wh.png" alt="페이스북"></li>
+                        <li><img class=img2 src="img/insta_wh.png" alt="인스타그램"></li>
+                        <li><img class=img3 src="img/twit_wh.png" alt="트위터"></li>
                     </ul>
                 </div>
             </div>
             <footer>
-
                 <div class="container">
                     <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
                     <address>
-                    <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 | 대표자: 양원주 | 팀원: 권경아, 손유성, 김미진</li>
+                    <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 &nbsp;|&nbsp; 대표자: 양원주 &nbsp;|&nbsp; 팀원: 권경아, 손유성, 김미진</li>
                     <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
                     </address>
                 </div>
             </footer>
         </div>
-    </div>
-    <!-- <div id="right_nav">
-        <ul>
-            <li><a href=""></a></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div> -->
 
-				<div class="container">
-                    <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
-					<address>
-					<li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 | 대표자: 양원주 | 팀원: 권경아, 손유성, 김미진</li>
-				    <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
-					</address>
-				</div>
-			</footer>
-		</div>
-	</div>
-	<!-- <div id="right_nav">
-		<ul>
-			<li><a href=""></a></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div> -->
 
-    
+
 </div>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script> 
@@ -439,24 +416,71 @@
         if(scrollTop<=100){
             $('header').css("background-color","black");
         }
+    });
+
+
+    $("#section3 .text1").on("mouseenter",function(){
+        $("#action").css("font-size", "36px");
+    });
+
+    $("#section3 .text1").on("mouseleave",function(){
+        $("#action").css("font-size", "30px");
+    });
+
+    $("#section3 .text2").on("mouseenter",function(){
+        $("#sf").css("font-size", "36px");
+    });
+
+    $("#section3 .text2").on("mouseleave",function(){
+        $("#sf").css("font-size", "30px");
+    });
+
+    $("#section3 .text3").on("mouseenter",function(){
+        $("#roman").css("font-size", "36px");
+    });
+
+    $("#section3 .text3").on("mouseleave",function(){
+        $("#roman").css("font-size", "30px");
+    });
+
+    $("#section3 .text4").on("mouseenter",function(){
+        $("#indi").css("font-size", "36px");
+    });
+
+    $("#section3 .text4").on("mouseleave",function(){
+        $("#indi").css("font-size", "30px");
+    });
+
+
+
+    $(".img1").on("mouseenter",function(){
+        $(this).attr("src", "img/facebook_red.png");
+    });
+
+    $(".img1").on("mouseleave",function(){
+        $(this).attr("src", "img/facebook_wh.png");
+    });
+
+    $(".img2").on("mouseenter",function(){
+        $(this).attr("src", "img/insta_red.png");
+    });
+
+    $(".img2").on("mouseleave",function(){
+        $(this).attr("src", "img/insta_wh.png");
+    });
+
+    $(".img3").on("mouseenter",function(){
+        $(this).attr("src", "img/twit_red.png");
+    });
+
+    $(".img3").on("mouseleave",function(){
+        $(this).attr("src", "img/twit_wh.png");
+    });
+
     //  });
     // var ht= $(window).height();
     // $("#section2").height(ht);
     
-
-	$(window).on("scroll", function(){
-		var scrollTop=$(window).scrollTop();
-		if(scrollTop>100){
-			$('header').css("background-color","transparent");
-		}
-		if(scrollTop<=100){
-			$('header').css("background-color","black");
-		}
-
-	//  });
-    // var ht= $(window).height();
-    // $("#section2").height(ht);
-	
 
 
 </script>
