@@ -34,7 +34,6 @@
             pointer-events: all;
             right:auto;
         }
-
         .menu ul{
             list-style-type:none;
             left:auto;
@@ -96,7 +95,7 @@
 		}
 		.details_wrap{
 			width: 667px;
-			height: 352px;
+			height: 332px;
 			border: 1px #C0BDBD solid;
 			margin: 60px 60px 0px 60px;
 			font-family: NanumGothic;
@@ -123,12 +122,10 @@
 			font-size: 20px;
 			font-style: Sans-serif;
 		}
-
 		.star{
 			float: right;
 			padding-top:10px;
 		}
-
 		.glyphicon-star{
 			color: #CB2E2E;
 		}
@@ -214,6 +211,7 @@
 			overflow: auto;
 		}
 		.movieListRight{
+			
 			margin: 0px 40px 20px 10px;
 			float: left;
 		}
@@ -228,6 +226,16 @@
 		}
 		.movieListRight div{
 			padding-top: 10px;
+		}
+		.movieListImgDiv{
+			position: relative;
+			width: 150px;
+			height: 217px;
+			overflow: hidden;
+		}
+		.movieListImg{
+			position: absolute;
+		
 		}
 		.movieListLeft{
 			margin: 0px 10px 20px 40px;
@@ -244,6 +252,16 @@
 		}
 		.movieListLeft div{
 			padding-top: 10px;
+		}
+		.backdrop{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 150px;
+			height: 217px;
+			background-color: #000;
+			opacity: 0.0;	
+		
 		}
 		#details{
 			margin: 20px;
@@ -316,9 +334,7 @@
 			padding-left: 10px;
 		}
 		.active{
-
 		}
-
 
 	</style>
 	
@@ -346,7 +362,7 @@
 			<!--스틸컷 div-->
 			<div class="photo_wrap">
 				<div class="infoHeaderInner">
-						<div class="movieTitle">귀향</div>
+						<div class="movieTitle">암살</div>
 						<span class="star">
 							<span  class="movieRating">평점 </span>
 							<i class="glyphicon glyphicon-star"></i>
@@ -354,21 +370,22 @@
 							<i class="glyphicon glyphicon-star"></i>
 							<i class="glyphicon glyphicon-star"></i>
 							<i class="glyphicon glyphicon-star-empty"> </i>
-							<span class="movieRating">9.14</span>
+							<span class="movieRating">9.10</span>
 						</span>
 					</div>
 				<!--스틸컷 fotorama-->
 				<div class="fotorama" data-autoplay="true" data-nav="thumbs" data-allowfullscreen="true">
 					
-					<a href="https://www.youtube.com/watch?v=TQXn9eW-xnw">
-    					<img src="movie_img/stealcut/귀향1.jpg">
+					<a href="https://youtu.be/LllIFYytkfs">
+    					<img src="movie_img/stealcut/암살8.jpg">
   					</a>
-					<img src="movie_img/stealcut/귀향1.jpg"/>
-					<img src="movie_img/stealcut/귀향2.jpg"/>
-					<img src="movie_img/stealcut/귀향3.jpg"/>
-					<img src="movie_img/stealcut/귀향4.jpg"/>
-					<img src="movie_img/stealcut/귀향5.jpg"/>
-					<img src="movie_img/stealcut/귀향6.jpg"/>
+					<img src="movie_img/stealcut/암살1.jpg"/>
+					<img src="movie_img/stealcut/암살2.jpg"/>
+					<img src="movie_img/stealcut/암살3.jpg"/>
+					<img src="movie_img/stealcut/암살4.jpg"/>
+					<img src="movie_img/stealcut/암살5.jpg"/>
+					<img src="movie_img/stealcut/암살6.jpg"/>
+					<img src="movie_img/stealcut/암살7.jpg"/>
 				</div>
 			</div>
 			<!--영화 정보 div-->
@@ -385,47 +402,49 @@
 						<div class="tab-pane active fade in" id="details">
 							<div class="detailsInfoDiv">
 								<p class="detailsInfo" id="infoP1">개요</p>
-								<p class="detailsInfo" id="infoP2">드라마</p>
-								<p class="detailsInfo" id="infoP3">96분</p>
+								<p class="detailsInfo" id="infoP2">액션, 드라마</p>
+								<p class="detailsInfo" id="infoP3">139분</p>
 								<p class="detailsInfo" id="infoP4">한국</p>
 								<p class="detailsInfo" id="infoP5">개봉일</p>
-								<p id="infoP6">2017년 9월 14일</p>
+								<p id="infoP6">2015년 7월 22일</p>
 							</div>
 							<div class="detailsAgeRestrictionDiv">
 								<p class="detailsAgeRestriction" id="ageRestrictionP1">등급</p>
-								<p id="ageRestrictionP2">15세 관람불가</p>
+								<p id="ageRestrictionP2">15세 관람가</p>
 							</div>
 							<div class="detailsTrailerDiv">
 								<p class="detailsTrailer" id="trailerP1">메인 예고편</p>
-								<a href="https://www.youtube.com/watch?v=TQXn9eW-xnw" id="trailerP2">https://www.youtube.com/watch?v=TQXn9eW-xnw</a>
+								<a href="https://youtu.be/LllIFYytkfs" id="trailerP2">https://youtu.be/LllIFYytkfs</a>
 							</div>
 						</div>
 						<div class="tab-pane fade in" id="summary">
-							<h4 class="summaryHeader">2016년 국민이 만든 기적의 영화 <귀향>
-							하지만, 일본군 ‘위안부’ 피해자들의 진정한 ‘귀향’은 아직 이루어지지 않았습니다</h4>
+							<h4 class="summaryHeader">1933년 조국이 사라진 시대</h4>
 							<br>
 							<p class="summaryContent">
-									<귀향>이 일본군 ‘위안부’ 피해자들에 대한 ‘기록’과 ‘위로’였다면, 
- 									<귀향, 끝나지 않은 이야기>는 우리가 전하는 ‘약속’입니다. 
+									 대한민국 임시정부는 일본 측에 노출되지 않은 세 명을 암살작전에 지목한다.
+									 한국 독립군 저격수 안옥윤, 신흥무관학교 출신 속사포, 폭탄 전문가 황덕삼!
+			 						김구의 두터운 신임을 받는 임시정부 경무국 대장 염석진은 이들을 찾아 나서기 시작한다.
+			 						암살단의 타깃은 조선주둔군 사령관 카와구치 마모루와 친일파 강인국.
+			 						한편, 누군가에게 거액의 의뢰를 받은 청부살인업자 하와이 피스톨이 암살단의 뒤를 쫓는데...
 							</p>
 						</div>
 						<div class="tab-pane fade" id="actor">
 							<div class="director">
 								<h5>
 									<span class="actorTitles" id="directorTitle">감독</span>
-									<span class="actorDetails">조정래</span>
+									<span class="actorDetails">이정범</span>
 								</h5>
 							</div>
 							<div class="mainActor">
 								<h5>
 									<span class="actorTitles" id="mainActorTitle">주연</span>
-									<span class="actorDetails">강하나, 최리, 박지희</span>
+									<span class="actorDetails">전지현, 이정재</span>
 								</h5>
 							</div>
 							<div class="subActor">
 								<h5>
 									<span class="actorTitles">조연</span>
-									<span class="actorDetails">홍세나, 남상지, 김시은</span>
+									<span class="actorDetails">하정우, 오달수, 조진웅, 이경영, 최덕문, 박병은</span>
 								</h5>
 							</div>
 						</div>
@@ -442,7 +461,10 @@
 			<div class="movieListDiv">
 				<div class="movieListLeft">
 					<a href="d_act_am.html">
+						<div class="movieListImgDiv">
 						<img src="movie_img/resizedImg/act_am.jpg" alt="">
+						<div class="backdrop"></div>
+						</div>
 						<div>
 							<span>암살</span>
 						</div>
@@ -450,7 +472,10 @@
 				</div>
 				<div class="movieListRight">
 					<a href="d_act_man.html">
-						<img src="movie_img/resizedImg/act_man.jpg" alt="">
+						<div class="movieListImgDiv">
+							<img class="movieListImg" src="movie_img/resizedImg/act_man.jpg" alt="">
+							<div class="backdrop"></div>
+						</div>
 						<div>
 							<span>아저씨</span>
 						</div>
@@ -645,8 +670,25 @@
 		$(".detailTaps").css('color', '#dfff');
 		$(this).css('background-color', '#d9534f');
 		$(this).css('color', '#fff');
+	});
 
-	})
+	$(".backdrop").hover(function(){
+			$(".movieListImg").animate({transform: "rotate(-90deg)", 
+				width: "160px", 
+				height: "237px", 
+				top: "-10px", 
+				left: "-5px"},400);
+			$('.backdrop').animate({ opacity: "0.2" }, 500);
+
+
+		},function(){
+			$(".movieListImg").animate({transform: "rotate(-90deg)", 
+				width: "150px", 
+				height: "217px", 
+				top: "0px", 
+				left: "0px"},400);;
+			$(".backdrop").css('opacity','0.0');
+		})
 </script>
 </body>
 </html>
