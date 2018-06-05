@@ -16,7 +16,6 @@
             justify-content: space-between;
             padding:30px 40px;
             /*background-color: black;*/
-<<<<<<< HEAD
             position: fixed;
             z-index: 100;
         }
@@ -25,13 +24,12 @@
             margin: 6px 6px 0px 0px;
             font-size: 30px;
         }
-        header .logo img{
+        /*header .logo img{
             width: 200px;
             position: absolute;
-=======
         	position: fixed;
         	z-index: 100;
-        }
+        }*/
         header .glyphicon-eye-open{
          	color: white;
          	margin: 6px 6px 0px 0px;
@@ -40,7 +38,6 @@
         header .logo img{
 			width: 200px;
 			position: absolute;
->>>>>>> c3c1e55ba9c6ce799abe3cbe57bf9851e42eff0a
         }
         .menu{
             bottom:auto;
@@ -143,24 +140,16 @@
             margin-top: 40px;
         }
         #section3{
-
             /*background-color: green;*/
         }
         #section3 .box_wrapper{
             width: 100%;
             height: 100%;
-
 			/*background-color: green;*/
         }
         #section3 .box_wrapper{
         	width: 100%;
         	height: 100%;
-<<<<<<< HEAD
-            
-=======
-
-
->>>>>>> 9647bcfdc303e65a76147d962c8c171ef7649e8a
         }
         #firstrow{
         	width: 100%;
@@ -168,12 +157,6 @@
             background-color: #d9534f;
             display: flex;
             color: white;
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 9647bcfdc303e65a76147d962c8c171ef7649e8a
         }
         #secondrow{
         	width: 100%;
@@ -182,37 +165,35 @@
             color: #d9534f;
         }
         #section3 .box{
-<<<<<<< HEAD
-			width: 400px;
-			
-=======
-
             width: 25%;
             text-align: center;
             overflow: hidden;
             /*background-color: #d9534f;*/
-
-			width: 25%;
-			text-align: center;
->>>>>>> 9647bcfdc303e65a76147d962c8c171ef7649e8a
-			overflow: hidden;
-			/*background-color: #d9534f;*/
-
         }
         #section3 .text{
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        /*#section3 .box h2{
+            cursor: pointer;
             
-        }*/
+        }
+        #section3 .text1 h2{
+            color: white;
+        }
+        #section3 .text1 h2:hover{
+            text-decoration: none;
+        }
+        .animation{
+            transition: all 0.3s linear;
+        }
+        #section3 .box h2{
+            font-weight: 600;
+        }
         #section3 .poster{
-            height: 100%;
-            background-attachment: fixed;
-            background-position: center;
+            /*background-attachment: fixed;*/
+            background-position: top;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100%;
         }
         #section3 .poster1{
             background-image: url("movie_img/rm_beaty.PNG");
@@ -221,24 +202,10 @@
             background-image: url("movie_img/dk_fl.PNG");
         }
         #section3 .poster3{
-            background-image: url("img/act_am.jpg");
+            background-image: url("img/am.jpg");
         }
         #section3 .poster4{
-            background-image: url("img/sf_aben.PNG");
-        }
-        #section3 .poster1{
-            /*width: 400px;*/
-        	background-image: url("movie_img/rm_beaty.PNG");
-        }
-        #section3 .poster2{
-        	background-image: url("movie_img/dk_fl.PNG");
-        }
-        #section3 .poster3{
-        	background-image: url("img/am.jpg");
-        }
-        #section3 .poster4{
-        	background-image: url("img/aven.jpg");
-
+            background-image: url("img/aven.jpg");
         }
         #section4{
             background-color: black;
@@ -246,14 +213,14 @@
         #section4 .icons{
             width: 600px;
             padding-top: 110px;
-            display: flex;
-            
             margin:0 auto;
-            
+        }
+        #section4 .icons ul{
+            display: flex;
+            justify-content: space-between;
         }
         #section4 .icons li{
             list-style: none;
-            justify-content: space-between;
         }
         #section4 footer{
             position: absolute;
@@ -286,15 +253,16 @@
         #section4 .icons{
             width: 600px;
             padding-top: 110px;
-            margin:0 auto;
             cursor: pointer;
+
         }
         #section4 .icons ul{
+            margin:0 auto;
             display: flex;
-            justify-content: space-between;
             padding: 0;
         }
         #section4 .icons li{
+
             list-style: none;
         }
         #section4 .icons img{
@@ -346,12 +314,12 @@
 <body>
 <div>
     <header>
-        <a class="logo" href="#main"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
+        <a class="logo" href="index.html"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
         <div class="menu">
             <ul>
-                <li><a href="">홈</a></li>
-                <li><a href="">테스트</a></li>
-                <li><a href="">장르</a></li>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="recommend.html">테스트</a></li>
+                <li><a href="list.html">장르</a></li>
             </ul>
         </div>
     </header>
@@ -392,30 +360,22 @@
         <div id="section3" class="section">
             <div class="box_wrapper">
                 <div id="firstrow">
-                    <div class="box text"><h2>액션</h2></div>
+                    <div class="box text text1"><a href="list.html"><h2 id="action" class="animation">액션</h2></a></div>
                     <div class="box poster poster1"><!-- <img src="movie_img/rm_beaty.PNG" alt="로맨스포스터"> --></div>
-                    <div class="box text"><h2>SF / 판타지</h2></div>
+                    <div class="box text text2"><h2 id="sf" class="animation">SF / 판타지</h2></div>
                     <div class="box poster poster2"><!-- <img src="movie_img/dk_fl.PNG" alt="독립포스터"> --></div>
                 </div>
                 <div id="secondrow">
                     <div class="box poster poster3"><!-- <img src="img/act_am.jpg" alt="액션포스터"> --></div>
-                    <div class="box text"><h2>로맨스</h2></div>
+                    <div class="box text text3"><h2 id="roman" class="animation">로맨스</h2></div>
                     <div class="box poster poster4"><!-- <img src="img/sf_aben.PNG" alt="SF/판타지포스터"> --></div>
-                    <div class="box text"><h2>독립</h2></div>
+                    <div class="box text text4"><h2 id="indi" class="animation">독립</h2></div>
                 </div>
             </div>
 
         </div>
-        <div id="section4" class="section">
-
-		</div>
 		<div id="section4" class="section">
-<<<<<<< HEAD
             <div class="contents" style="top:15%;">
-=======
-
-            <div class="contents" style="top:20%;">
->>>>>>> 9647bcfdc303e65a76147d962c8c171ef7649e8a
                 <h1>Contact us</h1>
                 <div class="icons">
                     <ul>
@@ -426,26 +386,6 @@
                 </div>
             </div>
             <footer>
-
-                <div class="container">
-                    <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
-                    <address>
-                    <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 | 대표자: 양원주 | 팀원: 권경아, 손유성, 김미진</li>
-                    <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
-                    </address>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <!-- <div id="right_nav">
-        <ul>
-            <li><a href=""></a></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div> -->
-
 				<div class="container">
                     <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
 					<address>
@@ -471,19 +411,6 @@
 <script src="js/bootstrap.js"></script> 
 <script>
 
-    $(window).on("scroll", function(){
-        var scrollTop=$(window).scrollTop();
-        if(scrollTop>100){
-            $('header').css("background-color","transparent");
-        }
-        if(scrollTop<=100){
-            $('header').css("background-color","black");
-        }
-    //  });
-    // var ht= $(window).height();
-    // $("#section2").height(ht);
-    
-
 	$(window).on("scroll", function(){
 		var scrollTop=$(window).scrollTop();
 		if(scrollTop>100){
@@ -493,6 +420,41 @@
 			$('header').css("background-color","black");
 		}
     });
+
+
+    $("#section3 .text1").on("mouseenter",function(){
+        $("#action").css("font-size", "36px");
+    });
+
+    $("#section3 .text1").on("mouseleave",function(){
+        $("#action").css("font-size", "30px");
+    });
+
+    $("#section3 .text2").on("mouseenter",function(){
+        $("#sf").css("font-size", "36px");
+    });
+
+    $("#section3 .text2").on("mouseleave",function(){
+        $("#sf").css("font-size", "30px");
+    });
+
+    $("#section3 .text3").on("mouseenter",function(){
+        $("#roman").css("font-size", "36px");
+    });
+
+    $("#section3 .text3").on("mouseleave",function(){
+        $("#roman").css("font-size", "30px");
+    });
+
+    $("#section3 .text4").on("mouseenter",function(){
+        $("#indi").css("font-size", "36px");
+    });
+
+    $("#section3 .text4").on("mouseleave",function(){
+        $("#indi").css("font-size", "30px");
+    });
+
+
 
     $(".img1").on("mouseenter",function(){
         $(this).attr("src", "img/facebook_red.png");
