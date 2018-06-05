@@ -291,7 +291,7 @@
 			
 			position:fixed;
 			top: 300px;
-			left:65px;
+			left:35px;
 			/*background-color: gray;*/
 			/*opacity: 0.4;*/
 			z-index: 5;
@@ -321,6 +321,7 @@
 			margin:0;
 			z-index: 6;
 
+
 		}
 
 		.mbox{
@@ -331,6 +332,7 @@
 			padding:10px;
 			font-size: 16px;
 			text-align: center;
+			
 
 		}
 
@@ -338,6 +340,72 @@
 			border:1px solid gray;
 			opacity: 0.7;
 		}
+
+/*--------------------------------*/
+		.mbox2{
+			
+			position:fixed;
+			top: 100px;
+			left:530px;
+			/*background-color: gray;*/
+			/*opacity: 0.4;*/
+			z-index: 5;
+			
+		}
+
+		.mbox2 a{
+			text-decoration: none;
+			color:white;
+			/*font-weight: bold;*/
+		}
+/*
+		.active{
+			background-color:#E74C3C;
+		}*/
+
+	/*	.mbox a:hover{
+			color:#E74C3C;
+		}*/
+
+		.mbox2 ul{
+			list-style:none;
+
+			margin:0;
+			z-index: 6;
+			
+			float: left;
+			padding-top:10px;
+			padding-bottom:10px;
+			padding-right: 20px;
+			padding-left: 20px;
+
+
+		}
+
+		.mbox2{
+			border:1px solid gray;
+			/*width:700px;
+			height: 50px;*/
+		}
+
+		.mbox2 li{
+			padding:10px;
+			font-size: 16px;
+			/*text-align: center;*/
+			float: left;
+			padding-bottom: 10px;
+
+
+		}
+
+	/*	.mbox2 .line{
+			border:1px solid gray;
+			width:0px;
+			height: 5px;
+			opacity: 0.7
+			/*padding:0;*/
+			/*margin:0;*/
+		}*/
 
 		#section7{
             background-color: black;
@@ -379,7 +447,7 @@
             /*position: absolute;*/
             width: 100%;
             height: 160px;
-            background-color: #ffff ;
+            background-color: #000;
             font-size: 14px;
             bottom: 0px;
         }
@@ -398,8 +466,10 @@
             padding-bottom: 5px;
             font-size: 15px;
             font-weight: 600;
-            color: black;
+            color: white;
         }
+
+
 
 
 
@@ -409,7 +479,7 @@
 </head>
 <body> 
 <div>
-	<header>
+ 	<header>
 		<a class="logo" href="index.html"><span class="glyphicon glyphicon-eye-open"></span><img src="img/logo.png" alt="MoviePicker"></a>
 		<div class="menu">
 			<ul>
@@ -433,8 +503,33 @@
 			<li id="dk"><a href="#section5" data-toggle="tab">독립</a></li>
 			<div class="line"></div>
 			<li id="ani"><a href="#section6" data-toggle="tab">애니메이션</a></li>
+			<!-- <div class="line"></div>
+			<li id="mchange"><span class="glyphicon glyphicon-chevron-up"></span></li> -->
 		</ul>
+
 	</div>
+		</div>
+
+	</div>
+<!-- 가로 mbox -->
+<!-- 	<div class="mbox2" style="z-index: 9">
+		<ul class="">
+			<li class="active" id="act2"><a href="#section1" data-toggle="tab">액션</a></li>
+			<li>|</li>
+			<li id="rm2"><a href="#section2" data-toggle="tab">로맨스</a></li>
+			<li>|</li>
+			<li id="sf2"><a href="#section3" data-toggle="tab">SF/판타지</a></li>
+			<li>|</li>
+			<li id="co2"><a href="#section4" data-toggle="tab">가족/코미디</a></li>
+			<li>|</li>
+			<li id="dk2"><a href="#section5" data-toggle="tab">독립</a></li>
+			<li>|</li>
+			<li id="ani2"><a href="#section6" data-toggle="tab">애니메이션</a></li>
+			<li>|</li>
+			<li id="mchange2"><span class="glyphicon glyphicon-chevron-down"></span></li>
+		</ul>
+	</div> -->
+
 	<div id="fullpage" class="wrapper" style="z-index: 1;">
 		<!-- <a href="#">
 			<span class="glyphicon glyphicon-star"></span>
@@ -944,7 +1039,11 @@
 		<div id="section7" class="section7">
             <footer>
                 <div class="container">
-                    <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
+<<<<<<< HEAD
+                    <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #fff; font-size: 24px;"></span><img src="img/logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
+=======
+                    <div class="logo"><span class="glyphicon glyphicon-eye-open" style="color: #000; font-size: 24px; top:-5px;"></span><img src="img/foot_logo.png" alt="foot_logo" style="width: 140px; margin: 0 0 12px 3px;"></div>
+>>>>>>> ce3882c133a09129fc62c4834ef7c4ac9e4791f2
                     <address>
                     <li>서울특별시 중구 다동 88 동아빌딩 15층 CLASS2 &nbsp;|&nbsp; 대표자: 양원주 &nbsp;|&nbsp; 팀원: 권경아, 손유성, 김미진</li>
                     <li>COPYRIGHT 2018 BY MOVIEPICKER. ALL RIGHTS RESERVED.</li>
@@ -1004,6 +1103,133 @@
 	}).parent().addClass("c4").one("animationend",function(){
 		$(this).removeClass("c4");
 	});
+
+
+	$("#section2 .one").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c1").one("animationend",function(){
+		$(this).removeClass("c1");
+	});
+
+	$("#section2 .two").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c2").one("animationend",function(){
+		$(this).removeClass("c2");
+	});
+
+	$("#section2 .three").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c3").one("animationend",function(){
+		$(this).removeClass("c3");
+	});
+
+	$("#section2 .four").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c4").one("animationend",function(){
+		$(this).removeClass("c4");
+	});
+
+
+	$("#section3 .one").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c1").one("animationend",function(){
+		$(this).removeClass("c1");
+	});
+
+	$("#section3 .two").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c2").one("animationend",function(){
+		$(this).removeClass("c2");
+	});
+
+	$("#section3 .three").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c3").one("animationend",function(){
+		$(this).removeClass("c3");
+	});
+
+	$("#section3 .four").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c4").one("animationend",function(){
+		$(this).removeClass("c4");
+	});
+
+	$("#section4 .one").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c1").one("animationend",function(){
+		$(this).removeClass("c1");
+	});
+
+	$("#section4 .two").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c2").one("animationend",function(){
+		$(this).removeClass("c2");
+	});
+
+	$("#section4 .three").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c3").one("animationend",function(){
+		$(this).removeClass("c3");
+	});
+
+	$("#section4 .four").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c4").one("animationend",function(){
+		$(this).removeClass("c4");
+	});
+
+	$("#section5 .one").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c1").one("animationend",function(){
+		$(this).removeClass("c1");
+	});
+
+	$("#section5 .two").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c2").one("animationend",function(){
+		$(this).removeClass("c2");
+	});
+
+	$("#section5 .three").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c3").one("animationend",function(){
+		$(this).removeClass("c3");
+	});
+
+	$("#section5 .four").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c4").one("animationend",function(){
+		$(this).removeClass("c4");
+	});
+
+	$("#section6 .one").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c1").one("animationend",function(){
+		$(this).removeClass("c1");
+	});
+
+	$("#section6 .two").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c2").one("animationend",function(){
+		$(this).removeClass("c2");
+	});
+
+	$("#section6 .three").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c3").one("animationend",function(){
+		$(this).removeClass("c3");
+	});
+
+	$("#section6 .four").addClass("animated fadeIn").one("animationend",function(){
+		$(this).removeClass("animated fadeIn");
+	}).parent().addClass("c4").one("animationend",function(){
+		$(this).removeClass("c4");
+	});
+
+
+
+
+
 
 	$("#act").click(function(){
 
